@@ -1,0 +1,108 @@
+\documentclass[a4paper]{article}
+
+%\usepackage[utf8]{inputenc}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+\usepackage{import}
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage[margin=2.5cm]{geometry} 
+\usepackage{listings}
+\usepackage[utf8x]{inputenc}
+\usepackage[numbered,framed]{matlab-prettifier}
+
+\let\ph\mlplaceholder % shorter macro
+\lstMakeShortInline"
+
+\lstset{
+  style              = Matlab-editor,
+  basicstyle         = \mlttfamily,
+  escapechar         = ",
+  mlshowsectionrules = true,
+}
+
+
+\begin{document}
+ 
+
+\title{Elaborato di \\ \textbf{Calcolo Numerico}}
+
+\author{Giovanni \emph{Bindi} - \texttt{5530804} - \href{mailto:giovanni.bindi@stud.unifi.it}{\textit{giovanni.bindi@stud.unifi.it}}
+   \and Gabriele \emph{Gemmi} - \texttt{5602433} -
+   \href{mailto:gabriele.gemmi@stud.unifi.it}{\textit{gabriele.gemmi@stud.unifi.it}}
+   \and Gabriele \emph{Puliti} - \texttt{5300140} - \href{mailto:gabriele.puliti@stud.unifi.it}{\textit{gabriele.puliti@stud.unifi.it}}} 
+
+
+\maketitle
+
+\tableofcontents
+
+
+\newpage
+\section{\textbf{Capitolo 1}}
+
+\subsection{\textbf{Esercizio 1.1}}
+Per definizione di metodo iterativo convergente si ha che 
+\[
+	\lim_{k \to +\infty}\ x_k = x^* 
+\]
+Supponendo la funzione \( \Phi(x_n) \) uniformemente continua vale
+\[ 
+	\lim_{k \to +\infty}\ \Phi(x_k) = x^*  = \Phi ( \lim_{k \to +\infty}\ x_k ) = x^* 
+\]
+Per definizione \'e \( \Phi(x_n) = \ x_{k+1} \) e quindi
+\[
+	\lim_{k \to +\infty}\ \Phi(x_k) = \lim_{k \to +\infty} \ x_{k+1} = x^*	
+\]
+Da cui otteniamo che \( x^* \) e'\ un punto fisso per la funzione \( \Phi(x_n) \) , ovvero che \( x^* = \Phi(x^*) \).
+
+\subsection{\textbf{Esercizio 1.2}}
+
+Dal momento che le variabili intere di 2 byte in Fortran vengono gestite in Modulo e Segno, la variabile \texttt{n}, inizializzata con
+
+\begin{lstlisting}[language=Fortran]
+integer*2 n
+\end{lstlisting}
+
+varia tra \( - 2^{15} \leq n \leq 2^{15} - 1 \) e quindi tra  \( -32768 \leq n \leq 32767 \). \\
+Andando quindi ad eseguire la somma \( (32767+1)_{10} = (0111111111111111 + 1)_{2,MS} = (11111111111111111)_{2,MS} = (-327628)_{10} \)
+
+\subsection{\textbf{Esercizio 1.3}}
+
+Per definizione si ha che la precisione di macchina \(u\) per arrotondamento e'\ data da
+\(
+u=\frac{1}{2} b ^{1-m}
+\). \\
+Se \(b=8, m=5\) si ha \( u = \frac{1}{2}\cdot 8^{-4} = 1,2207031 \cdot 10^{-4} \)
+
+\subsection{\textbf{Esercizio 1.4}}
+
+\subsection{\textbf{Esercizio 1.5}}
+
+\subsection{\textbf{Esercizio 1.6}}
+Codice dell'esercizio 6 : 
+\input{cap_1/es6.tex}
+\subsection{\textbf{Esercizio 1.7}}
+
+\subsection{\textbf{Esercizio 1.8}}
+
+\subsection{\textbf{Esercizio 1.9}}
+
+\subsection{\textbf{Esercizio 1.10}}
+
+\subsection{\textbf{Esercizio 1.11}}
+
+\subsection{\textbf{Esercizio 1.12}}
+
+\section{\textbf{Capitolo 2}}
+
+
+
+\end{document}
