@@ -15,5 +15,5 @@ m = (math.log(abs(3*(1-l) + 1))/2 + l*l + 1)
 print l
 print m
 
-#plt.plot(x,y)
-#plt.show()
+plt.plot(x,y)
+plt.savefig('es13.png')
