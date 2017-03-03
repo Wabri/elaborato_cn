@@ -1,4 +1,5 @@
 %Definire una procedura iterativa basata sul metodo di Newton per
+
 %determinare sqrt(alpha)
 
 x_0 = 3;
