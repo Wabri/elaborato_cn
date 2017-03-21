@@ -1,9 +1,9 @@
-Una matrice \( A \in M_{n \times n} \) \'e detta invertibile se \( \exists B \in M_{n \times n} \) tale che \( AB = BA = \mathit{I_n} \).
+Sia $A \in M_{n \times n}$ una matrice triangolare superiore non singolare.\\
+Se $A$ \'e invertibile allora pu\'o essere scritta come $A=D(\mathit{I_n}+U)$ dove $D$ \'e una matrice diagonale per cui vale $diag(D)=diag(A)$, $\mathit{I_n}$ \'e la matrice identit\'a ed $U$ \'e una matrice triangolare strettamente superiore ($diag(U)=0$).\\
+Per le propriet\'a delle matrici triangolari strettamente superiori si ha che $U^n = 0$ (ovvero che la matrice $U$ \'e nilpotente), mentre per le propriet\'a delle matrici diagonali si ha che $D^{-1}$ \'e ancora una matrice diagonale.
 \\
-Se \( A \) \'e triangolare inferiore deve essere \( B \) traingolare superiore dal momento che
+Volendo provare che $A^{-1}=(\mathit{I_n}+U)^{-1}D^{-1}$ espandiamo in serie $ (\mathit{I_n}+U)^{-1}$:
 \[
-AB = \sum_{k=1}^n a_{i,k} b_{k,j} = \delta_{i,j} \hspace{35pt} a_{i,j} \in A, b_{i,j} \in B
+(\mathit{I_n}+U)^{-1}=\mathit{I_n}-U+U^2-...+(-1)^{n-1}U^{n-1}.
 \]
-Dove \( \delta_{i,j} \) \'e la funzione delta di Kronecker. 
-
-//finire la dimostrazione
+Essendo questa una serie di somme e prodotti di matrici triangolari superiori la matrice inversa $A^{-1}$ sar\'a in generale una matrice triangolare superiore.
