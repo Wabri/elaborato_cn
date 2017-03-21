@@ -1,16 +1,17 @@
-Il calcolo della radice e dell'elevamento a potenza è sempre ben condizionato.  La parte problematica è l'overflow della somma.
+I problemi del calcolo della radice e dell'elevamento a potenza sono sempre ben condizionati (k=1/2 e k=2).  Il problema critico è l'overflowper la somma. Per evitare questa criticità proponiamo questa soluzione:
 Troviamo quindi il massimo dei due addendi:\\
-\begin{equation}
+\[
 m = max\{|x|,|y|\} 
-\end{equation}
-\begin{equation}
+\]
+\[
 \sqrt{x^2 + y^2}
-\end{equation}
+\]
 Dividiamo entrambi i membri per il massimo
-\begin{equation}
+\[
 \sqrt{m^2*(\frac{x}{m}^2 + \frac{y}{m}^2)}
-\end{equation}
+\]
 Portiamo fuori il massimo dalla radice
-\begin{equation}
+\[
 m*\sqrt{\frac{x}{m}^2 + \frac{y}{m}^2}
-\end{equation}
+\]
+In questo modo eviteremo la problematica dell'overflow per la somma e il problema resterà sempre ben condizionato.
