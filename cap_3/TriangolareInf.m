@@ -1,15 +1,13 @@
-function [x] = TriangolareInf(A, b)
+function [b] = TriangolareInf(A, b)
 %TRIANGOLAREINF Summary of this function goes here
 %   Detailed explanation goes here
-    [m, n] = size(A);
-    x = [];
+    [n,m] = size(A);
     for j=1:n
-        for i=1:m-1
-            disp(i);
+        for i=1:j-1
             if A(i,i) ~= 0
-                x(i) = (b(i) - A(i,j) * x(j)) / A(i,i);
+                b(j) = ((b(j) - A(j,i) * b(i)))/A(i,i);
             else
-                error('impossibile dividere per 0');
+                error('le matrice non è singolare')
             end
         end
     end
