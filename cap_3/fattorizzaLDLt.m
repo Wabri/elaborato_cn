@@ -32,4 +32,3 @@ function [L,D] = fattorizzaLDLt(A)
         end
     end
 end
-
