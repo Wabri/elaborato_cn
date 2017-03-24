@@ -2,7 +2,6 @@ Il seguente codice
 
 \lstinputlisting[language=Matlab]{cap_3/es13/es13.m}
 
-\\
 
 Restituisce il seguente output:
 
@@ -36,22 +35,10 @@ A2 =
 	1 2 3 3 
 	1 2 3 2 
 
-L2 = 
+Error using es13.>fattorizzaLDLt (line 20) la matrice non sdp! 
 
-	1 0 0 0 
-	1 1 0 0 
-	1 1 1 0 
-	1 1 1 1 
-
-D2 = 
-
-	1 0 0 0 
-	0 1 0 0 
-	0 0 1 0 
-	0 0 0 1
+Error in es13. (line 4) [L2,D2] = fattorizzaLDLt(A2)
 
 \end{lstlisting}
-
-\\
 
 Essendo le due matrici fattorizzabili $LDL^T$ allora sono anche sdp.

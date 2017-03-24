@@ -1,4 +1,4 @@
 A1 = [1,1,1,1;1,2,2,2;1,2,3,3;1,2,3,4]
-[L1,D1] = fattorizzaLDLt(A)
+[L1,D1] = fattorizzaLDLt(A1)
 A2 = [1,1,1,1;1,2,2,2;1,2,3,3;1,2,3,2]
-[L2,D2] = fattorizzaLDLt(A1)
+[L2,D2] = fattorizzaLDLt(A2)
