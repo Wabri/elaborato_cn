@@ -47,7 +47,7 @@ The projecct is divided by chapter.
     3. Exercise 3 - :heavy_check_mark:
     3. Exercise 4 - :heavy_check_mark:
     3. Exercise 5 - :heavy_check_mark:
-    3. Exercise 6 - :heavy_exclamation_mark:
+    3. Exercise 6 - :heavy_check_mark:
     3. Exercise 7 - :heavy_check_mark:
     3. Exercise 8 - :heavy_check_mark:
     3. Exercise 9 - :heavy_check_mark:
