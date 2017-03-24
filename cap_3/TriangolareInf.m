@@ -1,15 +1,20 @@
 function [b] = TriangolareInf(A, b)
-%TRIANGOLAREINF Summary of this function goes here
-%   Detailed explanation goes here
-    [n,m] = size(A);
-    for j=1:n
-        for i=1:j-1
-            if A(i,i) ~= 0
-                b(j) = ((b(j) - A(j,i) * b(i)))/A(i,i);
-            else
-                error('le matrice non è singolare')
-            end
+
+% La funzione restituisce la soluzione
+% del sistema lineare Ax = b con A
+% matrice triangolare inferiore utilizzando
+% il metodo di backsubstitution.
+% Il vincolo sulla matrice e' che deve essere
+% nonsingolare.
+
+    for j=1:length(A)
+        if A(j,j) ~= 0
+            b(j) = b(j)/A(j,j);
+        else
+            error('le matrice è singolare')
+        end
+        for i=j+1:length(A)
+            b(i) = b(i)-A(i,j)*b(j);
         end
     end
 end
-

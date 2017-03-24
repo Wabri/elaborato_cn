@@ -1,10 +1,10 @@
-%x = TriSupPiv(A, b, p)
-%Risoluzione di sistemi Triangolari superiori per colonna con pivoting
-%parziale
+function [b] = TriangolareSup(A, b)
 
-function [x] = TriSup(A, b, p)
+%x = TriangolareSup(A, b)
+%Risoluzione di sistemi Triangolari superiori per colonna
+
     for j=lenght(A):-1:1
-        if A(j,j)==0
+        if A(i,i)==0
             error('Matrice non singolare')
         else
             b(j)=b(j)/A(j,j);
@@ -13,4 +13,4 @@ function [x] = TriSup(A, b, p)
             b(i)=b(i)-A(i,j)*b(j);
         end
     end
-            
+end
