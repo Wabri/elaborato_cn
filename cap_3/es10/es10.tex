@@ -1,6 +1,6 @@
 L'algoritmo esegue $i-1$ somme di due prodotti, una sottrazione ed una divisione per un costo totale di $2(i-1)+2$ \texttt{flops}. Essendo la matrice triangolare, per ogni colonna eseguir\'a il calcolo $n-i$ volte.
 \\
-Quindi 
+Quindi
 \[
-\sum_{i=1}^{n} 2i(n-i) = 2(n \sum_{i=1}^{n}i - \sum_{i=1}^{n} i^2) = 2n\frac{n(n+1)}{2} - 2\frac{n(n+1)(2n+1)}{6} = n^3 + n^2 - \frac{2n^3 + 3n^2 + n}{3} = \frac{n^3}{3} - \frac{n}{3} \approx \frac{n^3}{3}.
-\] 
+\sum_{i=1}^{n} 2i(n-i) = 2(n \sum_{i=1}^{n}i - \sum_{i=1}^{n} i^2) = 2n\frac{n(n+1)}{2} - 2\frac{n(n+1)(2n+1)}{6} = n^3 + n^2 - \frac{2n^3 + 3n^2 + n}{3} = \frac{n^3}{3} - \frac{n}{3} \approx \frac{n^3}{3}. \qedsymbol
+\]

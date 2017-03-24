@@ -2,7 +2,7 @@ Una matrice \( L \in M_{n \times n} \) si dice triangolare inferiore se \( l_{i,
 \\
 Date due matrici triangolari inferiori \( L,K \in M_{n \times n} \) la loro somma sar\'a di nuovo una matrice traingolare inferiore \( N \in M_{n \times n} \):
 \[
- \forall i<j, \hspace{5pt} l_{i,j} + k_{i,j} = 0 + 0 = 0. 
+ \forall i<j, \hspace{5pt} l_{i,j} + k_{i,j} = 0 + 0 = 0.
 \]
 \\
 Una matrice \( U \in M_{n \times n} \) si dice triangolare superiore se \( u_{i,j}=0, \forall i>j \) con \(i,j = 1...n \) ed \( u_{i,j} \in U \).
@@ -10,8 +10,8 @@ Date due matrici triangolari superiori  \( U,W \in M_{n \times n} \)  il loro pr
 \[
 z_{i,j} = \sum_{k=1}^n u_{i,k} w_{k,j}, \hspace{35pt} \forall i,j \in [1,..,n].
 \]
-sar\'a di nuovo una matrice triangolare superiore, dal momento che 
+sar\'a di nuovo una matrice triangolare superiore, dal momento che
 \[
-z_{i,j} =  \sum_{k=1}^n u_{i,k} w_{k,j} =  \underbrace{ \sum_{k=1}^{i-1} u_{i,k} w_{k,j} }_\text{=0 per k<i}  + \sum_{k=i}^n u_{i,k} w_{k,j} = \sum_{k=i}^n u_{i,k} w_{k,j}.
+z_{i,j} =  \sum_{k=1}^n u_{i,k} w_{k,j} =  \underbrace{ \sum_{k=1}^{i-1} u_{i,k} w_{k,j} }_\text{=0 per k<i}  + \sum_{k=i}^n u_{i,k} w_{k,j} = \sum_{k=i}^n u_{i,k} w_{k,j}. \qedsymbol
 \]
 Dal momento che in quest'ultimo termine abbiamo \( k \geq i \) se \( i>j \) allora \( k>j \), da cui la definizione di matrice triangolare superiore.

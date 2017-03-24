@@ -1,7 +1,7 @@
 L'espressione aritmetica dei due algoritmi è:\\
 \begin{itemize}
-\item{1)} (x+y)+z = x+y+z 
-\item{2)}  x+(y+z) = x+y+z 
+\item{1)} (x+y)+z = x+y+z
+\item{2)}  x+(y+z) = x+y+z
 \end{itemize}
 Ne consegue che sono equivalenti
 In aritmetica finita, invece, avremo:
@@ -12,7 +12,7 @@ In aritmetica finita, invece, avremo:
 prendo \( \varepsilon_M = max\{\varepsilon_x, \varepsilon_y, \varepsilon_z, \varepsilon_A, \varepsilon_B\}\)
 \[\varepsilon_R \leq \frac{x(1+\varepsilon_M)^3 + y(1+\varepsilon_M)^3+z(1+\varepsilon_M)^2 -x-y-z}{z+y+z} = \]
 \[ =  \frac{x(3\varepsilon_M + 3\varepsilon_M^2 +\varepsilon_M^3) + y(3\varepsilon_M + 3\varepsilon_M^2 +\varepsilon_M^3)+z(2\varepsilon_M + \varepsilon_M^2)}{z+y+z}    \]
-Sapendo che \(\varepsilon_M \leq 1 \) posso affermare che \( \varepsilon_M \geq \varepsilon_M^2 \geq \varepsilon_M?3 \) ed effettuare un'altra minorazione
+Sapendo che \(\varepsilon_M \leq 1 \) posso affermare che \( \varepsilon_M \geq \varepsilon_M^2 \geq \varepsilon_M^3 \) ed effettuare un'altra minorazione
 
 \[ \varepsilon_R \leq \frac{7x\varepsilon_M + 7y\varepsilon_M + 3z\varepsilon_M}{x+y+z} = \varepsilon_M(3+4\frac{x+y}{x+y+z}) \]
 

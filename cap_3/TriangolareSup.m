@@ -1,8 +1,7 @@
-function [b] = TriangolareSup(A, b)
-
 %x = TriangolareSup(A, b)
 %Risoluzione di sistemi Triangolari superiori per colonna
 
+function [b] = TriangolareSup(A, b)
     for j=lenght(A):-1:1
         if A(i,i)==0
             error('Matrice non singolare')

@@ -1,0 +1,14 @@
+# Fdb version 3
+["pdflatex"] 1490391298 "es7.tex" "es7.pdf" "es7" 1490391298
+  "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
+  "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm" 1136768653 1332 f817c21a1ba54560425663374f1b651a ""
+  "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm" 1136768653 1336 3125ccb448c1a09074e3aa4a9832f130 ""
+  "/usr/local/texlive/2016/texmf-dist/web2c/texmf.cnf" 1463093894 31953 b9489e6e586f798610c60aec1f5ec548 ""
+  "/usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1468201477 3873644 db9cd3bb97ce5b03f3b9631a600221e8 ""
+  "/usr/local/texlive/2016/texmf.cnf" 1468201456 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
+  "es7.aux" 1490391298 8 a94a2480d3289e625eea47cd1b285758 ""
+  "es7.tex" 1490391297 953 75e713aee9d83b0f50c48995a6a284c7 ""
+  (generated)
+  "es7.pdf"
+  "es7.log"

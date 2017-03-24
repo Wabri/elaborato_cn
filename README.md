@@ -26,7 +26,7 @@ The projecct is divided by chapter.
     1. Exercise 5 - :heavy_check_mark:
     1. Exercise 6 - :heavy_exclamation_mark:
     1. Exercise 7 - :heavy_check_mark:
-    1. Exercise 8 - :heavy_check_mark:
+    1. Exercise 8 - :heavy_exclamation_mark:
     1. Exercise 9 - :heavy_check_mark:
     1. Exercise 10 - :heavy_check_mark:
     1. Exercise 11 - :heavy_check_mark:
@@ -62,5 +62,3 @@ The projecct is divided by chapter.
     3. Exercise 18 - :x:
     3. Exercise 19 - :x:
     3. Exercise 20 - :x:
-
-        
