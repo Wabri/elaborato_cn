@@ -15,20 +15,24 @@ function [L,D] = fattorizzaLDLt(A)
         end
         A((j+1):n,j)=(A((j+1):n,j)-A((j+1):n,1:(j-1))*v)/A(j,j);
     end
+    if nargout==1
+        L=A;
+    else
     for j=1:n
-        for i=1:n
-            if i==j
+      for i=1:n
+           if i==j
                 D(i,j) = A(i,j);
                 L(i,j) = 1;
-            end
-            if i>j
+         end
+           if i>j
                 D(i,j) = 0;
                 L(i,j) = A(i,j);
-            end
+           end
             if i<j
                 D(i,j) = 0;
                 L(i,j) = 0;
-            end
-        end
+           end
+       end
+    end
     end
 end
