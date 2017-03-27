@@ -19,6 +19,6 @@ function [A, p] =  LUP(A)
             p([i, ki]) = p([ki, i]);
         end
         A((i+1):n, i) = A((i+1):n, i)/A(i, i);
-        A((i+1):n, i+1:n) = A((i+1):n, (i+1):n) -A((i+1):n, i)*A(i,(i+1):n);
+        A((i+1):n, (i+1):n) = A((i+1):n, (i+1):n) -A((i+1):n, i)*A(i,(i+1):n);
     end
 end

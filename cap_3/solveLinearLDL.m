@@ -1,5 +1,5 @@
 % Risolve il sistema lineare Ax = b fattorizzando
-% la matrice A con metodo LDLt
+% in cui la matrice A e' fattorizzata LDLt
 %
 % Il vettore b viene riscritto con l'informazione
 % necessaria per ottimizzare la memoria.
