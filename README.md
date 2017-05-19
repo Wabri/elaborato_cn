@@ -65,7 +65,7 @@ The projecct is divided by chapter.
     3. Exercise 21 - :x:
 4. **Chapter 4**
     4. Exercise 1 - :x:
-    4. Exercise 2 - :x:
+    4. Exercise 2 - :heavy_exclamation_mark:
     4. Exercise 3 - :x:
     4. Exercise 4 - :x:
     4. Exercise 5 - :x:
