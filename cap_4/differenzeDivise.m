@@ -10,9 +10,9 @@
 % −f: vettore contenente le n+1 differenze divise.
 
 function [f] = differenzeDivise(x, f)
-    for i=1:length(x)−1
-	for j=length(x):−1:i+1
-	    f(j) = (f(j) − f(j−1))/(x(j)−x(j−i));
+    for i=1:length(x)-1
+	for j=length(x):-1:i+1
+	    f(j) = (f(j) - f(j-1))/(x(j)-x(j-i));
     	end
     end
 end
