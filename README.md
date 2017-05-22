@@ -77,7 +77,7 @@ The projecct is divided by chapter.
 5. **Chapter 5 and 6**
     5. Exercise 1 - :x:
     5. Exercise 2 - :x:
-    5. Exercise 3 - :x:
-    5. Exercise 4 - :x:
+    5. Exercise 3 - :heavy_check_mark:
+    5. Exercise 4 - :heavy_check_mark:
     5. Exercise 5 - :x:
     5. Exercise 6 - :x:
