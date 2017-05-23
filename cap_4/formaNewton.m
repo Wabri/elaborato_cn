@@ -1,11 +1,11 @@
 % p = formaNewton(ptx, fi)
 % Calcolo dell'espressione del polinomio interpolante una funzione in forma di Newton.
 % Input:
-% −ptx: vettore contenente le ascisse di interpolazione;
-% −fi: i valori assunti dalla funzione da interpolare in
+% -ptx: vettore contenente le ascisse di interpolazione;
+% -fi: i valori assunti dalla funzione da interpolare in
 % corrispondenza delle ascisse di interpolazione in ptx.
 % Output:
-% −p: espressione (come funzione inline) del polinomio interpolante.
+% -p: espressione (come funzione inline) del polinomio interpolante.
 
 function [p] = formaNewton(ptx, fi)
     n = length(ptx)-1;

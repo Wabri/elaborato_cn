@@ -1,11 +1,11 @@
 % ptx = ascisseEquispaziate(a, b, n)
 % Calcolo delle ascisse equidistanti in un dato intervallo.
 % Input:
-% −a: estremo sinistro dell'intervallo;
-% −b: estremo destro dell'intervallo;
-% −n: numero delle ascisse da produrre (n+1, da 0 ad n).
+% -a: estremo sinistro dell'intervallo;
+% -b: estremo destro dell'intervallo;
+% -n: numero delle ascisse da produrre (n+1, da 0 ad n).
 % Output:
-% −ptx vettore contenente le n+1 ascisse equidistanti.
+% -ptx vettore contenente le n+1 ascisse equidistanti.
 
 
 function [ptx] = ascisseEquispaziate(a, b, n)

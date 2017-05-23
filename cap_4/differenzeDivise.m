@@ -3,11 +3,11 @@
 % forma di Newton (rispetto alla base di Newton).
 %
 % Input:
-% −f: vettore contenente i valori della funzione sulle ascisse di interpolazione;
-% −x: vettore contenente le n+1 ascisse di interpolazione.
+% -f: vettore contenente i valori della funzione sulle ascisse di interpolazione;
+% -x: vettore contenente le n+1 ascisse di interpolazione.
 %
 % Output:
-% −f: vettore contenente le n+1 differenze divise.
+% -f: vettore contenente le n+1 differenze divise.
 
 function [f] = differenzeDivise(x, f)
     for i=1:length(x)-1
