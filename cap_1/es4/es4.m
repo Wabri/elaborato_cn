@@ -1,4 +1,4 @@
-format long;
+format long e;
 
 x_0 = 0;
 
