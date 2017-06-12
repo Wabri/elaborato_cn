@@ -3,7 +3,7 @@ function y = Aitken( f, df, x0, imax, tol )
     i = 0;
     vai=1;
 
-    while((i < imax) && vai) 
+    while((i < imax) && vai)
         x1 = NewtonMod(f, df, 1, x0, 1, tol, 0);
         x2 = NewtonMod(f, df, 1, x1, 1, tol, 0);
         i = i+1;
@@ -21,7 +21,7 @@ function y = Aitken( f, df, x0, imax, tol )
         if(abs(x-x0)<tol)
             vai = 0;
         end
-        x0 = x;        
+        x0 = x;
     end
     if(vai)
         disp('Impossibile calcolare la tolleranza richiesta nel numero di iter');

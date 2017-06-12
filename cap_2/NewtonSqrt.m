@@ -1,4 +1,3 @@
-
 function y = NetwtonSqrt(alpha, x0, imax, tol)
     format long e
     x = (x0 + alpha/x0)/2;
@@ -7,7 +6,8 @@ function y = NetwtonSqrt(alpha, x0, imax, tol)
         x0=x;
         i = i+1;
         x = (x0 + alpha/x0)/2;
+        disp(x);
     end
     y = x;
-   
+
 end

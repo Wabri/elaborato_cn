@@ -1,5 +1,7 @@
 function y = NewtonMod(f, df, m, x0, imax, tol, output)
     format long;
+    f = inline(f);
+    df = inline(df);
     i = 0;
     x = x0;
     vai=1;
