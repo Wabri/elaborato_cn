@@ -1,63 +1,38 @@
-myfun = inline('1./(1.+x.^2)');
-myotherfun = inline('x*sin(x)');
+e = inline('abs(feval(f,x) - feval(p,x))');
+maxn = 8;
+equi = [];
+cheb = [];
 
+
+Rungef = @(x) 1./(1.+x.^2);
 a=-5; b=5;
-e = inline('abs( feval(f,x) - feval(p,x) )');
-
-n = 5;
-ascisse = ascisseEquispaziate(a, b, n);
-funInterp = formaNewton(ascisse, myfun(ascisse));
-maxErr = e(myfun, funInterp, fminbnd(@(x)(-e(myfun, funInterp, x)), a, b));
-str = sprintf('Errore massimo con n = %d: %5.4f', n, maxErr);
-disp(str);
-
-n = 10;
-ascisse = ascisseEquidistanti(a, b, n);
-funInterp = formaNewton(ascisse, myfun(ascisse));
-maxErr = e(myfun, funInterp, fminbnd(@(x)(-e(myfun, funInterp, x)), a, b));
-str = sprintf('Errore massimo con n = %d: %5.4f', n, maxErr);
-disp(str);56
-
-n = 15;
-ascisse = ascisseEquidistanti(a, b, n);
-funInterp = formaNewton(ascisse, myfun(ascisse));
-maxErr = e(myfun, funInterp, fminbnd(@(x)(-e(myfun, funInterp, x)), a, b));
-str = sprintf('Errore massimo con n = %d: %5.4f', n, maxErr);
-disp(str);
-
-n = 20;
-ascisse = ascisseEquidistanti(a, b, n);
-funInterp = formaNewton(ascisse, myfun(ascisse));
-maxErr = e(myfun, funInterp, fminbnd(@(x)(-e(myfun, funInterp, x)), a, b));
-str = sprintf('Errore massimo con n = %d: %5.4f', n, maxErr);
-disp(str);
-
+plots_equi = [];
+plots_chebi = [];
+for n=2:2:maxn
+    ascisse = ascisseEquispaziate(a, b, n);
+    RungeInt = poliNewton(ascisse, Rungef(ascisse));
+    equi(n)  = e(Rungef, RungeInt, fminbnd(@(x)(-e(Rungef, RungeInt, x)), a, b));  
+    l = linspace(a,b,100);
+    plots_equi=  cat(2, plots_equi, RungeInt(l)');    
+    
+    chebi = chebyshev(a, b, n);
+    RungeInt = poliNewton(chebi, Rungef(chebi));
+    cheb(n) = e(Rungef, RungeInt, fminbnd(@(x)(-e(Rungef, RungeInt, x)), a, b));
+    %plots_chebi=  cat(2, plots_chebi, RungeInt(l)');    
+end
+%result_runge = [[2,4,6,8,10,12,14,16,18,20]', equi', cheb'];
+surf(l', [2:2:maxn]',plots_equi');
+s
+Sinf = inline('x.*sin(x)');
 a=0; b=pi;
-
-n = 5;
-ascisse = ascisseEquispaziate(a, b, n);
-secInterp = formaNewton(ascisse, myotherfun(ascisse));
-maxErr = e(myotherfun, secInterp, fminbnd(@(x)(-e(myotherfun, secInterp, x)), a, b));
-str = sprintf('Errore massimo con n = %d: %5.4f', n, maxErr);
-disp(str);
-
-n = 10;
-ascisse = ascisseEquispaziate(a, b, n);
-secInterp = formaNewton(ascisse, myotherfun(ascisse));
-maxErr = e(myotherfun, secInterp, fminbnd(@(x)(-e(myotherfun, secInterp, x)), a, b));
-str = sprintf('Errore massimo con n = %d: %5.4f', n, maxErr);
-disp(str);
-
-n = 15;
-ascisse = ascisseEquispaziate(a, b, n);
-secInterp = formaNewton(ascisse, myotherfun(ascisse));
-maxErr = e(myotherfun, secInterp, fminbnd(@(x)(-e(myotherfun, secInterp, x)), a, b));
-str = sprintf('Errore massimo con n = %d: %5.4f', n, maxErr);
-disp(str);
-
-n = 20;
-ascisse = ascisseEquispaziate(a, b, n);
-secInterp = formaNewton(ascisse, myotherfun(ascisse));
-maxErr = e(myotherfun, secInterp, fminbnd(@(x)(-e(myotherfun, secInterp, x)), a, b));
-str = sprintf('Errore massimo con n = %d: %5.4f', n, maxErr);
-disp(str);
+for n=2:2:maxn
+    ascisse = ascisseEquispaziate(a, b, n);
+    SinInt = poliNewton(ascisse, Sinf(ascisse));
+    equi(n)  = e(Sinf, SinInt, fminbnd(@(x)(-e(Sinf, SinInt, x)), a, b));
+    chebi = chebyshev(a, b, n);
+    SinInt = poliNewton(chebi, Sinf(chebi));
+    cheb(n) = e(Sinf, SinInt, fminbnd(@(x)(-e(Sinf, SinInt, x)), a, b));
+    %l = linspace(a,b,100);
+    %plots=  cat(2, plots, SinInt(l)');    
+end
+%result_sin = [(1:maxn)', equi', cheb'];

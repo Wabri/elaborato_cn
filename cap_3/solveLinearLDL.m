@@ -4,9 +4,8 @@
 % Il vettore b viene riscritto con l'informazione
 % necessaria per ottimizzare la memoria.
 
-function [b] = solveLinearLDL(A, b)
-    
-    b = TriangolareInf(tril(A,-1) + eye(length(A)),b);
-    b = diagonale(diag(A),b);
-    b = TriangolareSup((tril(A,-1) + eye(length(A)))',b);
+function [b] = solveLinearLDL(L,D, b)
+    b = TriangolareInf(L,b');
+    b = diagonale(diag(D),b');
+    b = TriangolareSup(L',b');
 end

@@ -3,6 +3,4 @@ function [d] = diagonale(d,b)
     for i = 1:n
         d(i) = b(i)/d(i);
     end
-    
-
 end

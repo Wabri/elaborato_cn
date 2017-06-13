@@ -1,24 +1,25 @@
-%[M, p] =LUP(A)
-%Esercizio 5 capitolo 3
-%Fattorizzazione LU con pivoting parziale
-
-function [A, p] =  LUP(A)
-    [m,n]=size(A);
-    if m~=n
-        error('Errore: matrice non quadrata');
+function [L,U,P]=LUP(A)
+[m,n]=size(A);
+if m~=n 
+    error('matrice non quadrata'); 
+end
+L=eye(n); 
+P=eye(n); 
+U=A;
+for k=1:n
+    [pivot, m]=max(abs(U(k:n,k)));
+    if pivot==0
+        error('Errore: Matrice singolare');
     end
-    p=[1:n];
-    for i=1:(n-1)
-        [aki, ki] = max(abs(A(i:n, i)));
-        if aki==0
-            error('Matrice singolare');
+    m=m+k-1;
+        if m~=k
+        % scambio le righe m e k
+        U([k,m], :) = U([m, k], :);
+        P([k,m], :) = P([m, k], :);
+        if k >= 2
+            L([k,m],1:k-1) = L([m,k],1:k-1);
         end
-        ki=ki+i-1;
-        if ki>i
-            A([i, ki], :) = A([ki, i], :);
-            p([i, ki]) = p([ki, i]);
-        end
-        A((i+1):n, i) = A((i+1):n, i)/A(i, i);
-        A((i+1):n, (i+1):n) = A((i+1):n, (i+1):n) -A((i+1):n, i)*A(i,(i+1):n);
     end
+    L(k+1:n,k)=U(k+1:n,k)/U(k,k);  
+    U(k+1:n,:)=U(k+1:n,:)-L(k+1:n,k)*U(k,:);
 end

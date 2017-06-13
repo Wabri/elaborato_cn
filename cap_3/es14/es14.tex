@@ -1,66 +1,36 @@
 \textit{Esempio per esercizio \textbf{3.5} e \textbf{3.6}}:\\ \\
-Sia 
-\( A = 
+Sia A la matrice da noi scelta per la risoluzione dell'esercizio.
+\[ A =
 \begin{pmatrix}
   0 & -3 & 8 \\
   -1 & 8 & 7 \\
   1 & 3 & 0
  \end{pmatrix}
-\) la matrice da noi scelta per la risoluzione dell'esercizio. \\ \\ Fattorizziamola con il metodo LU a pivoting parziale, da noi denominato \texttt{LUP(A)}, avendo cura di riscrivere il risultato nella stessa locazione di memoria. \\ \\ Adesso quindi $A = 
-\begin{pmatrix}
-  -1.0000 & 8.0000 & 7.0000 \\
-  -1.0000 & 11.0000 & 7.0000 \\
-  0 & -0.2727 & 9.9091
- \end{pmatrix}
-$ e $\mathbf{p} = (2,3,1)$ vettore di permutazione.
-\\ \\ 
-Dal momento che vale $PA=LU$ si ha che $PA\mathbf{x} = P\mathbf{b} = LU\mathbf{x}$
-se adesso scegliamo $\mathbf{b} = 3.1416,1.1618,2.7183)^T$, utilizzando la funzione \texttt{solveLinearLUP(A,p,b)} otteniamo 
-\[
-PA\mathbf{x} = P\mathbf{b} = \]
-\[
-\begin{pmatrix}
-  -1.0000 & 8.0000 & 7.0000 \\
-  -1.0000 & 11.0000 & 7.0000 \\
-  0 & -0.2727 & 9.9091
- \end{pmatrix} \begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix} = \begin{pmatrix}
- 0 & 1 & 0 \\
-  0 & 0 & 1 \\
-  1 & 0 & 0
- \end{pmatrix} \begin{pmatrix}3.1416\\1.1618\\2.7183\end{pmatrix}
 \]
-Da cui 
-\[
-\mathbf{x} = \begin{pmatrix}2.4692 \\ 0.0830 \\ 0.4238 \end{pmatrix}.
-\]\\ 
-\textit{Esempio per esercizio \textbf{3.11} e \textbf{3.12}}: \\ \\ 
-Sia
-\( A = 
+Sia b il vettore dei termini noti.
+\[{b} = (3.1416, 1.1618, 2.7183)^T\]
+Utilizzando i metodi numerici allegati e risolvendo il sistema lineare \[Ax = b\] otteniamo il vettore delle incognite
+\[x = ( 2.469228440366973,  0.083023853211009,  0.423833944954129)^T\]
+Quindi il vettore residuo \[ r = Ax - b = 1.0*10^{-15}( 0.888178419700125,  0,  0)\]
+
+
+\textit{Esempio per esercizio \textbf{3.11} e \textbf{3.12}}: \\ \\
+Sia A la matrice da noi scelta per la risoluzione dell'esercizio.
+\[ A =
 \begin{pmatrix}
   14 & 5 & 2 \\
-  -5 & 8 & 1\\
+  5 & 8 & 1\\
   2 & 1 & 4
  \end{pmatrix}
-\) la matrice da noi scelta per la risoluzione dell'esercizio. \\ \\ Fattorizziamola con il metodo $LDL^T$ da noi denominato \texttt{fattorizzaLDLt}. La matrice $A$ riscritta con l'informazione del metodo risulta quindi essere \\ \\ \( A = 
-\begin{pmatrix}
-  14.0000 & 5.0000 & 2.0000 \\
-  -0.3571 & 6.2143 & 1.0000\\
-  0.1429 & 0.2759 & 3.2414
- \end{pmatrix}
-\). \\
-Utilizzando lo stesso vettore dei termini noti $\mathbf{b}$ risolviamo quindi il sistema lineare $A\mathbf{x} = \mathbf{p}$ con la function \texttt{solveLinearLDL} : 
-\[
-\begin{pmatrix}
-  14.0000 & 5.0000 & 2.0000 \\
-  -0.3571 & 6.2143 & 1.0000\\
-  0.1429 & 0.2759 & 3.2414
- \end{pmatrix} \begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix} = \begin{pmatrix}3.1416\\1.1618\\2.7183\end{pmatrix}
-\] \\ 
-Da cui 
-\[
-\mathbf{x} = \begin{pmatrix}0.2336\\0.2280\\0.5058\end{pmatrix}
 \]
+Sia b il vettore dei termini noti.
+\[{b} = (3.1416, 1.1618, 2.7183)^T\]
+Utilizzando i metodi numerici allegati e risolvendo il sistema lineare \[Ax = b\] otteniamo il vettore delle incognite
 
-\textbf{ATTENZIONE : NON TORNANO I CONTI....} check it here \url{https://www.wolframalpha.com/input/?i=[[14,5,2],[-0.3571,6.2143,1],[0.1429,0.2759,3.2414]]*[x1,x2,x3]+%3D+[3.1416,1.1618,2.7183]} and here \url{https://www.wolframalpha.com/input/?i=[[-1,8,7],[-1,11,7],[0,-0.2727,9.9091]]*[x1,x2,x3]+%3D+[[0,1,0],[0,0,1],[1,0,0]]*[3.1416,1.1618,2.7183]} \\ codice :
+\[x = ( 0.144645652173913,  -0.021765217391304,  0.612693478260870)^T\]
+
+Quindi il vettore residuo \[ r = Ax - b = 1.0*10^{-15}( 0, -0.444089209850063,  0)\]
+
+
 
 \lstinputlisting[language=Matlab]{cap_3/es14/es14.m}
