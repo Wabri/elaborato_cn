@@ -4,7 +4,7 @@
 % Il vettore b viene riscritto con l'informazione
 % necessaria per ottimizzare la memoria.
 
-function [b] = solveLinearLUP(L,U, P, b)
+function [b] = solveLinearLUP(L, U, P, b)
     b = TriangolareInf(L,P*b);
     b = TriangolareSup(U,b);
 end
