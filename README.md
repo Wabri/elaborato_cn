@@ -67,16 +67,16 @@ The projecct is divided by chapter.
     4. Exercise 1 - :heavy_check_mark:
     4. Exercise 2 - :heavy_check_mark:
     4. Exercise 3 - :heavy_check_mark:
-    4. Exercise 4 - :heavy_check_mark:
+    4. Exercise 4 - :heavy_exclamation_mark:
     4. Exercise 5 - :heavy_check_mark:
     4. Exercise 6 - :x:
     4. Exercise 7 - :x:
-    4. Exercise 8 - :x:
-    4. Exercise 9 - :x:
-    4. Exercise 10 - :x:
+    4. Exercise 8 - :heavy_check_mark:
+    4. Exercise 9 - :heavy_check_mark:
+    4. Exercise 10 - :heavy_check_mark:
 5. **Chapter 5 and 6**
-    5. Exercise 1 - :heavy_exclamation_mark:
-    5. Exercise 2 - :x:
+    5. Exercise 1 - :heavy_check_mark:
+    5. Exercise 2 - :heavy_check_mark:
     5. Exercise 3 - :heavy_check_mark:
     5. Exercise 4 - :heavy_check_mark:
     5. Exercise 5 - :x:
