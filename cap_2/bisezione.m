@@ -18,11 +18,6 @@ function [sol,nit]=bisezione(f,a,b,tolx,maxit);
         else
             a=sol;
         end
-        j=j+1;
-
+        j=j+1; 
     end
-    disp('Radice della funzione:')
-    sol
-    disp('Iterazioni effettuate:')
-    nit
 end

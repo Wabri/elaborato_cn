@@ -10,7 +10,6 @@ function y = SecNSqrt(n, alpha, x0, imax, tol)
         x = (f(x1,n, alpha) * x0 - f(x0,n, alpha)*x1 ) / (f(x1, n, alpha) - f(x0, n, alpha));
     end
     y = x;
-
 end
 
 

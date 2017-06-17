@@ -1,19 +1,4 @@
 function[xs,nit,scarti]=Newton(myf,df,x0,tolx,maxit)
-
-% Metodo di Newton per calcolare la radice di una equazione
-% non lineare f(x)=0 mediante costruzione di una successione
-% {x(k)} convergente alla radice x ( x(0) stima iniziale assegnata ).
-%
-% myf : stringa che contiene il nome della funzione f(x)
-% df: stringa che contiene il nome della derivata prima f'(x)
-% my2f: stringa che contiene il nome della derivata seconda f''(x)
-% x0 : approssimazione iniziale della radice
-% tolx : criterio di arresto (sullo scarto) | x(k+1)-x(k) | < toll
-% maxit : numero massimo di iterazioni
-% xs : approssimazione finale della radice
-% nit : numero di iterazioni eseguite per trovare la soluzione
-% scarti: vettore degli scarti d(k), k=1,....
-
     scarti0 = 1.0e5;
     x(1) = x0;
     fk = feval(myf,x0);

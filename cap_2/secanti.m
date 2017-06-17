@@ -1,22 +1,4 @@
 function [x,nit,tolf]=secanti(f,x0,x1,tolx,maxit)
-    
-%SECANTI Esegue il metodo delle secanti, per la risoluzione di f(x)=0
-%
-%   [x,i,tolf]=SECANTI(x0,x1,f,tolx,nmax)
-%
-%   I parametri della funzione sono:
-%       x0 -> il punto iniziale e prima approssimazione di x
-%       x1 -> la seconda approssimazione della soluzione x
-%       f -> funzione di cui valutare uno zero
-%       tolx -> tolleranza per la radice
-%       nmax -> limite superiore al numero di iterazioni
-%
-%   I valori di ritorno sono:
-%       x -> la soluzione trovata
-%       i -> il numero di iterazioni impiegate per ottenere la soluzione
-%       tolf -> la tolleranza sulla funzione
-%
-%   See Also NEWTON, CORDE, STEFFENSEN
   nit=0;
   fx0=feval(f,x0);
   err=abs(x1-x0);
@@ -35,5 +17,4 @@ function [x,nit,tolf]=secanti(f,x0,x1,tolx,maxit)
       nit=nit+1;
   end
   x=x1;
-  x,nit
 end
