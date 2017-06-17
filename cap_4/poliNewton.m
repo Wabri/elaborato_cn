@@ -1,14 +1,4 @@
-function [p] = poliNewton(xi, fi)
-    n = length(xi)-1;
+function [pval] = poliNewton(xi, fi, xval)
     dd = diffDiv(xi, fi);
-    syms x;
-    p = dd(1);
-    for i=2:n+1
-        prod = dd(i);
-        for j=1:i-1
-            prod = prod*(x-xi(j));
-        end
-        p = p + prod;
-    end
-    p = inline(p);
+    pval = HornerGeneralizzato(xi,dd,xval);
 end
