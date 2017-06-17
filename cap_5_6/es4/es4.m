@@ -1,14 +1,3 @@
-% [x1, i] = jacobi(A, b, x0, tol)
-% Risoluzione iterativa di sistemi lineari tramite il metodo di Jacobi.
-% Input:
-% -A: la matrice dei coefficienti;
-% -b: vettore dei termini noti;
-% -x0: approssimazione iniziale della soluzione;
-% -tol: la tolleranza richiesta.
-% Output:
-% -x1: l'approssimazione calcolata del vettore soluzione;
-% -i: numero di iterazioni eseguite.
-
 function [x1, i] = jacobi(A, b, x0, tol)
     M = diag(diag(A));
     i = 0;
@@ -22,18 +11,6 @@ function [x1, i] = jacobi(A, b, x0, tol)
 	r = A*x0 - b;
     end
 end
-
-% [x1, i] = gaussSeidel(A, b, x0, tol)
-% Risoluzione iterativa di sistemi lineari tramite il metodo di
-% Gauss-Seidel.
-% Input:
-% -A: la matrice dei coefficienti;
-% -b: vettore dei termini noti;
-% -x0: approssimazione iniziale della soluzione;
-% -tol: la tolleranza richiesta.
-% Output:
-% -x1: l'approssimazione calcolata del vettore soluzione;
-% -i: numero di iterazioni eseguite.
 
 function [x1, i] = gaussSeidel(A, b, x0, tol)
     M = tril(A);

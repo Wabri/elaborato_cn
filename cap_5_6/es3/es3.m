@@ -1,15 +1,11 @@
-%	ATTENZIONE !!!
-%	NON TESTATO
-%	DVX NOBIS
+f = @(x) x*exp(-x)*cos(2*x);
 
-f = inline (' x*exp(-x)*cos(2x) ');
-
-[In,px] = simpsonAdattiva(f,0,2*pi,e-5);
+[In,px] = simpsonAdattiva(f,0,2*pi,10^-5);
 
 disp(In);
 disp(px);
 
-[In,px] = trapeziAdattiva(f,0,2*pi,e-5);
+[In,px] = trapeziAdattiva(f,0,2*pi,10^-5);
 
 disp(In);
 disp(px);

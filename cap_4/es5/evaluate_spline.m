@@ -7,6 +7,7 @@ function [plots, value_space] = evaluate_spline(funct, a, b, max_n, n_steps, nak
        s = splineCubica(l, funct(l));
        if nak
            plots(i,:) = spline(l,funct(l),value_space);
+           %plots(i,:) = fnval(csape(l,funct(l)), value_space);
        else
            plots(i,:) = valutaSpline(l,s,value_space)';
        end

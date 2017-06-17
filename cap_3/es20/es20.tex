@@ -1,0 +1,25 @@
+Risolviamo il sistema di equazioni non lineari applicando il metodo di Newton.
+La funzione data è \[F(x_1, x_2)= \begin{cases}x_2-cos(x_1)\\ x_1x_2 -1/2\end{cases}\]
+Vogliamo trovare $F(x_1, x_2)=0$ partendo da $x_1(0) = 1\mbox{, } x_2(0) = 1$\\
+Troviamo quindi il Jacobiano della funzione: \( J=\begin{pmatrix} sin(x_1) & 1  \\\ x_1 & x_2 \end{pmatrix} \)\\
+Applicando il metodo di Newton si va a risolvere:
+$\begin{cases} J_F(\underline{x}^{(k)})\underline{d}^{(k)}=-F(\underline{x}^{(k)}) \\ \quad \underline{x}^{(k+1)}=\underline{x}^{(k)}+\underline{d}^{(k)} \end{cases}$\\
+Troviamo quindi: $x_1 = 0.6100 \mbox{ e } x_2 =0.8196$
+
+Il codice matlab per il calcolo del minimo è:
+\lstinputlisting[language=Matlab]{cap_3/es20/es20.m}
+
+Il codice matlab per la risoluzione di sistemi di equazioni non lineari mediante Newton è:
+\lstinputlisting[language=Matlab]{cap_3/NewtonNL.m}
+
+\begin{tabular}{l|c|r}
+i & $x_1,x_2$ & norma dell'incremento \\
+\hline
+1 & 0.7458, 0.7542 & 0.5001 \\
+2 & 0.5531, 0.8653 & 0.3145 \\
+3 & 0.6042, 0.8241 & 0.0929 \\
+4 & 0.6100, 0.8197 & 0.0102 \\
+5 & 0.6100, 0.8196 & 0.00013 \\ 
+
+
+\end{tabular}
