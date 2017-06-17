@@ -1,18 +1,15 @@
-Tesi:\\
-Sia f(x) una funzione sufficentemente regolare e h>0 una quantità ``piccola''\\
-Ipotesi:\\
+Sia $f(x)$ una funzione sufficentemente regolare e $h>0$ una quantità ``piccola''\\
 \[
 \frac{f(x_0 + h) - f(x_0 + h)}{2h} = f'(x_0) + O(h^2)
 \]
 \[
 \frac{f(x_0 + h) -2f(x_0) - f(x_0 + h)}{h^2} = f''(x_0) + O(h^2)
 \]
-Dimostrazione:\\
-Sviluppiamo la funzione f(x) mediante il polinomio di taylor al secondo ordine\\
+Sviluppiamo la funzione $f(x)$ mediante il polinomio di Taylor al secondo ordine\\
 \[
 f(x) = f(x_0) + (x-x_0)f'(x_0)+\frac{(x-x_0)^2}{2}f''(x_0) + O((x-x_0)^3)
 \]
-Sostituiamo \[x=(x_0 +h)\] e  \[x=(x_0-h)\]
+Sostituiamo \[ x=(x_0 +h) \mbox{ e } x=(x_0-h) \]
 \[
 f((x_0 +h) = f(x_0) + hf'(x_0)+\frac{h^2}{2}f''(x_0) + O(h^3)
 \]

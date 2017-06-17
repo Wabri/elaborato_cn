@@ -1,5 +1,5 @@
 function y = SecNSqrt(n, alpha, x0, imax, tol)
-    %format long e
+    format long e
     x1 = (x0 + alpha/x0)/2;
     x = (f(x1,n, alpha) * x0 - f(x0,n, alpha)*x1 ) / (f(x1, n, alpha) - f(x0, n, alpha));
     i = 1;
@@ -10,7 +10,7 @@ function y = SecNSqrt(n, alpha, x0, imax, tol)
         x = (f(x1,n, alpha) * x0 - f(x0,n, alpha)*x1 ) / (f(x1, n, alpha) - f(x0, n, alpha));
     end
     y = x;
-   
+
 end
 
 

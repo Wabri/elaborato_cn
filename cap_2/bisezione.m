@@ -1,15 +1,3 @@
-% Function che implementa il metodo di bisezione
-% Input:
-% f : funzione di cui vogliamo trovare la radice
-% a,b : estremi (rispettivamente sx e dx) dell'intervallo
-% tolx : tolleranza con la quale siamo interessati ad approssimare
-% la soluzione
-% maxit : numero massimo di iterazioni 
-% Output:
-% sol : zero della funzione nell'intervallo
-% nit : numero di iterazioni che sono state
-% eseguite per trovare la soluzione
-
 function [sol,nit]=bisezione(f,a,b,tolx,maxit);
     nit=maxit;
     j=0;
