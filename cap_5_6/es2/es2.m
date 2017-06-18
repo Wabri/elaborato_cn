@@ -12,5 +12,5 @@ for i=1:8
     end
 end
 
-semilogy(err);
+semilogy([1:8],err);
 plot([2:nmax],rap);
