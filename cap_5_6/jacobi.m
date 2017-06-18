@@ -1,4 +1,4 @@
-function [xn, i] = jacobi(A, b, x0, tol, nmax)
+function [xn, i, err] = jacobi(A, b, x0, tol, nmax)
     D = diag(diag(A));
     J = -inv(D)*(A-D);
     q = D\b;

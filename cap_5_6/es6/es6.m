@@ -7,8 +7,8 @@
 % -H: matrice contenente le informazioni sui link presenti tra le
 % diverse pagine web (H(i, j)=1 se esiste un link tra la pagina j e
 % la pagina i, altrimenti 0);
-% -p: probabilità con cui il random surfer sceglie di seguire un link
-% presente nella pagina (con probabilità 1−p salta verso una pagina a
+% -p: probabilita con cui il random surfer sceglie di seguire un link
+% presente nella pagina (con probabilita 1-p salta verso una pagina a
 % caso del web);
 % -tol: tolleranza richiesta.
 % Output:
@@ -19,7 +19,7 @@ function [x] = metodoPotenzeGooglePagerank(H, p, tol)
 
     [m,n] = size(H);
     if m~=n
-	error('Ha matrice non è quadrata!');
+	error('H matrice non quadrata!');
     end
     delta = zeros(n, 1);
     for j=1:n
@@ -44,9 +44,9 @@ function [x] = metodoPotenzeGooglePagerank(H, p, tol)
 
     x = rand(n,1);
     x = x/norm(x);
-    imax = (log(tol)−log(2))/(log(p));
+    imax = (log(tol)-log(2))/(log(p));
     for i=1:imax
-	x = p*(H*x)+((1+p*(delta'*x −1))/n)*ones(n,1);
+	x = p*(H*x)+((1+p*(delta'*x -1))/n)*ones(n,1);
     end
     
 end
