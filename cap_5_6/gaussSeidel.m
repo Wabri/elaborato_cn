@@ -1,4 +1,4 @@
-function [x1, k] = gaussSeidel(A, b, x0, nmax, tol)
+function [x1, k, err] = gaussSeidel(A, b, x0, nmax, tol)
     D=diag(diag(A));
     L=tril(A)-D; 
     U=triu(A)-D;
