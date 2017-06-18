@@ -22,6 +22,27 @@ Il seguente listato genera due grafici per le funzioni date:
 \caption{Ascisse di Chebyshev per $g(x) = sin(x)*x$}
 \label{SinChe}
 \end{figure}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{cap_4/es2/Runge_equi_err.png}
+\caption{Errore per Ascisse Equidistanti per $f(x) = \frac{1}{1+x^2}$}
+\label{RungeEqErr}
+\end{figure}
+\begin{figure}
+\includegraphics[width=\textwidth]{cap_4/es2/Runge_cheb_err.png}
+\caption{Errore per Ascisse di Chebyshev per $f(x) = \frac{1}{1+x^2}$}
+\label{RungeCheErr}
+\end{figure}
+\begin{figure}
+\includegraphics[width=\textwidth]{cap_4/es2/Sin_equi_err.png}
+\caption{Errore per Ascisse Equidistanti per $g(x) = sin(x)*x$}
+\label{SinEqErr}
+\end{figure}
+\begin{figure}
+\includegraphics[width=\textwidth]{cap_4/es2/Sin_cheb_Err.png}
+\caption{Errore per Ascisse di Chebyshev per $g(x) = sin(x)*x$}
+\label{SinCheErr}
+\end{figure}
 $\left(\begin{tabu}{cccc}
 RungeEq & RungeCheb & SinEq & SinCheb \\
 \hline
@@ -29,4 +50,5 @@ RungeEq & RungeCheb & SinEq & SinCheb \\
 
 
 Possiamo vedere la differenza tra \ref{RungeEq} e \ref{RungeChe}, nella prima all'aumentare delle ascisse la funzione interpolata degenera, mentre nella seconda già con n=5 abbiamo una buona interpolazione.
-Nel caso della seconda funzione possiamo vedere che la differenza tra \ref{SinEq} e \ref{SinChe} non è molto rilevante.
+Nel caso della seconda funzione possiamo vedere che la differenza tra \ref{SinEq} e \ref{SinChe} non è molto rilevante. Infatti già con 4 ascisse abbiamo un interpolazione quasi perfetta.
+Nelle figure \ref{RungeEqErr} \ref{RungeCheErr} \ref{SinEqErr} \ref{SinCheErr} e' possibile vedere l'andamento dell'errore per i vari metodi di interpolazione.
