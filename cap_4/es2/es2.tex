@@ -22,11 +22,11 @@ Il seguente listato genera due grafici per le funzioni date:
 \caption{Ascisse di Chebyshev per $g(x) = sin(x)*x$}
 \label{SinChe}
 \end{figure}
-\begin{figure}
-\includegraphics[scale=0.7]{cap_4/es2/error.png}
-\caption{Confronto degli errori per le due funzioni}
-\label{error}
-\end{figure}
+$\left(\begin{tabu}{cccc}
+RungeEq & RungeCheb & SinEq & SinCheb \\
+\hline
+0.646 & 0.4371 & 0.6381 & 0.4371\\ 0.4383 & 0.02286 & 0.04127 & 0.02286\\ 0.6164 & 0.0004779 & 0.001343 & 0.0004779\\ 1.045 & 5.332\cdot 10^{-6} & 2.575\cdot 10^{-5} & 5.332\cdot 10^{-6}\\ 1.915 & 3.688\cdot 10^{-8} & 3.238\cdot 10^{-7} & 3.688\cdot 10^{-8}\\ 3.612 & 1.734\cdot 10^{-10} & 2.843\cdot 10^{-9} & 1.734\cdot 10^{-10}\\ 7.189 & 5.892\cdot 10^{-13} & 1.873\cdot 10^{-11} & 5.892\cdot 10^{-13}\\ 14.01 & 3.417\cdot 10^{-15} & 1.261\cdot 10^{-13} & 3.417\cdot 10^{-15}\\ 27.51 & 1.776\cdot 10^{-15} & 8.933\cdot 10^{-14} & 1.776\cdot 10^{-15}\\ 58.41 & 2.327\cdot 10^{-15} & 1.768\cdot 10^{-13} & 2.327\cdot 10^{-15} \end{tabu}\right)$
+
+
 Possiamo vedere la differenza tra \ref{RungeEq} e \ref{RungeChe}, nella prima all'aumentare delle ascisse la funzione interpolata degenera, mentre nella seconda già con n=5 abbiamo una buona interpolazione.
 Nel caso della seconda funzione possiamo vedere che la differenza tra \ref{SinEq} e \ref{SinChe} non è molto rilevante.
-L'ultima figura \ref{error} è un confrontro tra gli errori delle varie interpolazioni. Come già visto nei grafici precedenti la differenza più evidente è nel caso della funzione di Runge.

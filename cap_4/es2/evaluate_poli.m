@@ -11,7 +11,7 @@ function [errors, plots, l] = evaluate_poli(funct, a, b, maxn, n_steps, cheb_asc
         end
         
         fInt = poliNewton(ascisse, funct(ascisse), l);
-        errors(i,:) = abs(fInt-funct(l));
+        errors(i,:) = funct(l)-fInt;
         plots(i,:) = fInt;
     end
 end
