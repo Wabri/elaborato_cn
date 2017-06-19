@@ -5,8 +5,8 @@ nmax = 8;
 err = zeros(nmax,2);
 rap = zeros(nmax-1,2);
 for i=1:8
-    err(i,1) = abs(y - trapeziComposita(F,0,2*pi,2^i));
-    err(i,2) = abs(y - simpsonComposita(F,0,2*pi,2^i));
+    err(i,1) = abs(y - trapeziComp(F,0,2*pi,2^i));
+    err(i,2) = abs(y - simpsonComp(F,0,2*pi,2^i));
     if i>1
         rap(i-1,:) = err(i,:)./err(i-1,:);
     end
