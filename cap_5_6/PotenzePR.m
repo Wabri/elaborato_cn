@@ -1,4 +1,4 @@
-function [x] = PotenzePR(H, p, tol)
+function [x,i] = PotenzePR(H, p, tol)
   [m,n] = size(H);
   if m~=n
     error('Errore: H non quadrata');
