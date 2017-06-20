@@ -1,4 +1,4 @@
-function [In] = simpsonComposita(f,a,b,n)
+function [In] = simpsonComp(f,a,b,n)
     h = (b-a)/n;
     In = f(a)-f(b);
     for i=1:n/2

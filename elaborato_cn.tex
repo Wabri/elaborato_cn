@@ -17,6 +17,7 @@
 \usepackage{mathtools}
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{listings}
+\usepackage{titling}
 \usepackage[utf8x]{inputenc}
 \usepackage[numbered,framed]{matlab-prettifier}
 
@@ -33,18 +34,26 @@
   mlshowsectionrules = true,
 }
 
+\pretitle{%
+  \begin{center}
+  \LARGE
+  \includegraphics[width=\textwidth]{logo_unifi.png}\\[\bigskipamount]
+}
+\posttitle{\end{center}}
+
 
 \begin{document}
 
 
-\title{Elaborato di\\ \textbf{Calcolo Numerico}}
+
+\title{Elaborato di\\ \textbf{Calcolo Numerico}\vspace{3cm}}
 
 \author{Giovanni \emph{Bindi} - \texttt{5530804} - \href{mailto:giovanni.bindi@stud.unifi.it}{\textit{giovanni.bindi@stud.unifi.it}}
    \and Gabriele \emph{Gemmi} - \texttt{5602433} - \href{mailto:gabriele.gemmi@stud.unifi.it}{\textit{gabriele.gemmi@stud.unifi.it}}}
    %\and Gabriele \emph{Puliti} - \texttt{5300140} - \href{mailto:gabriele.puliti@stud.unifi.it}{\textit{gabriele.puliti@stud.unifi.it}}}
 
 \maketitle
-
+\newpage
 \tableofcontents
 
 
