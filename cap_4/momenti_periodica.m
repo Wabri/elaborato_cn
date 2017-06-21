@@ -1,20 +1,6 @@
 function [ m ] = momenti_periodica(phi, xi, dd)
     n = length(xi);
-    A=zeros(n);
     dd = 6 * dd;
-    for i=1:n
-        for j=1:n
-            if j==i
-                A(i,j)=2;
-            elseif i==j+1 || (i==1 && j==n)
-                A(i,j)=phi(j);
-            elseif i==j-1 || (i==n && j==1)
-                A(i,j)=xi(i);
-            end
-        end
-    end
-    m_lins = A\dd;
-    
     lambda=zeros(1,n-1);
     l=zeros(1,n);
     u=zeros(1,n);
@@ -37,7 +23,7 @@ function [ m ] = momenti_periodica(phi, xi, dd)
         sum = gamma(j)*lambda(j);
     end
     u(n) = 2-sum;
-    
+
     L=zeros(n);
     U=zeros(n);
     for i=1:n
@@ -56,6 +42,6 @@ function [ m ] = momenti_periodica(phi, xi, dd)
             end
         end
     end
-    m_alg = solveLinearLUP(L,U,eye(n), dd);
-        
+    m = solveLinearLUP(L,U,eye(n), dd);
+
 end
