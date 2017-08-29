@@ -1,5 +1,0 @@
-\lstinputlisting[language=Matlab]{cap_3/es15/es15.m}
-
-Analiticamente abbiamo che $\rVert A \rVert_{\infty} = \rVert A \rVert_1 = 101$, come \'e possibile verificare attraverso l'istruzione \texttt{norm} di Matlab.
-Per quanto riguarda il calcolo del numero di condizionamento $\mathit{k_{\infty}}(A)$ abbiamo che, andando a calcolare l'inversa, gli elementi della matrice crescono di 2 ordini di grandezza per ogni riga, arrivando ad avere valori prossimi a $10^{18}$. Questo implica che $\rVert A^{-1} \rVert_{\infty}>10^{20}$ per cui possiamo affermare che il problema \'e malcondizionato.
-La verifica con l'istruzione \texttt{cond} di Matlab restituisce un warning in cui avverte che $RCOND=9.801980e-21$, confermando quanto appena detto.
