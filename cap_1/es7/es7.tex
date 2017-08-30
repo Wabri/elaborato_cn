@@ -1,0 +1,13 @@
+Sapendo che la rappresentazione del numero è stata fatta usando l'arrotondamento allora la precisione di macchina si calcola:
+\[
+u = \frac{b^{1-m}}{2}
+\]
+che sappiamo essere pari a:
+\[
+u \approx 4.66 \cdot 10^{-10}
+\]
+dato che stiamo cercando il numero di cifre binarie allora si deve avere $b=2$, è possibile quindi ricavarsi $m$:
+\[
+m = 1- log_2{(4.66 \cdot 10 ^{-10})} \approx 31.99
+\]
+possiamo quindi affermare che servono 32 cifre dedicate alla mantissa per rappresentare il numero con precisione macchina \(4.66 \cdot 10^{-10}\).

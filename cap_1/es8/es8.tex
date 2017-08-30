@@ -1,0 +1,10 @@
+Sapendo che la mantissa in decimale è calcolabile tramite la funzione:
+\begin{itemize}
+\item \( m = 1- log_{10}{u} \) (troncamento) 
+\item \( m = 1- log_{10}{(2\cdot u)} \) (arrotondamento)
+\end{itemize}
+e che la precisione di macchina assuma un valore accettabilemente piccolo in modo tale che il \(log_{10}{u} \approx 1\), cioè $0<=u<1$, allora è possibile scrivere:
+\begin{itemize}
+\item \( m = 1 - log_{10}{u} \approx -log_{10}{u} \) (troncamento)
+\item \( m = 1 - log_{10}{2u} = 1 - log_{10}{2} - log_{10}{u} \approx -log_{10}{u} \) (arrotondamento)
+\end{itemize}
