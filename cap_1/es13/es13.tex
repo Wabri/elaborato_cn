@@ -1,0 +1,4 @@
+Il problema è che stiamo rappresentando dei numeri reali in un calcolatore quindi la loro rappresentazione comporta delle approssimazioni. Nella riga 11 abbiamo calcolato e restituito in output il valore interno al logaritmo $\big|3(1-\frac{3}{4})+1\big|$ che teoricamente è zero, ma si ottiene $ 2.220446049250313e-16 $. 
+Si può vedere che il codice MatLab:
+\lstinputlisting{cap_1/es13/es13.m}
+calcola i valori della funzione ottenendo il grafico \ref{fes113} e si può notare che l'asintoto verticale in $x=\frac{4}{3}$ viene rappresentato come minimo della funzione $f(x)$.
