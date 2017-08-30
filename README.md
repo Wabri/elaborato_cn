@@ -29,9 +29,9 @@ The projecct is divided by chapter.
     1. Exercise 8 - :heavy_check_mark:
     1. Exercise 9 - :heavy_exclamation_mark:
     1. Exercise 10 - :heavy_check_mark:
-    1. Exercise 11 - :x:
-    1. Exercise 12 - :x:
-    1. Exercise 13 - :x:
+    1. Exercise 11 - :heavy_check_mark:
+    1. Exercise 12 - :heavy_check_mark:
+    1. Exercise 13 - :heavy_check_mark:
 2. **Chapter 2**
     2. Exercise 1 - :x:
     2. Exercise 2 - :x:
