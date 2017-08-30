@@ -1,0 +1,23 @@
+Il codice seguente:
+\lstinputlisting[language=Matlab]{cap_1/es4/es4.m}
+\newpage
+restituisce questo risultato (assumendo che $f(x)$ = $ e^x $ e $ x_0 = 0 $ ): 
+\begin{center}
+\begin{tabular}{c|c}
+h & \( \Psi_{h}(0) \)  \\
+\hline
+    \(10^{-1}\) & 1.051709180756477e+00\\
+    \(10^{-2}\) & 1.005016708416795e+00\\
+    \(10^{-3}\) & 1.000500166708385e+00\\
+    \(10^{-4}\) & 1.000050001667141e+00\\
+    \(10^{-5}\) & 1.000005000006965e+00\\
+    \(10^{-6}\) & 1.000000499962184e+00\\
+    \(10^{-7}\) & 1.000000049433680e+00\\
+    \(10^{-8}\) & 9.999999939225290e-01\\
+    \(10^{-9}\) & 1.000000082740371e+00\\
+    \(10^{-10}\) & 1.000000082740371e+00\\
+    \(10^{-11}\) & 1.000000082740371e+00\\
+    \(10^{-12}\) & 1.000088900582341e+00\\
+\end{tabular} \\
+\end{center}
+si può notare che al diminuire del valore h, la funzione \(\Psi_{h}(0)\) approssima sempre meglio il valore $f'(0)$, come si può vedere dal plot \ref{fes14}.
