@@ -33,14 +33,14 @@ The projecct is divided by chapter.
     1. Exercise 12 - :heavy_check_mark:
     1. Exercise 13 - :heavy_check_mark:
 2. **Chapter 2**
-    2. Exercise 1 - :x:
-    2. Exercise 2 - :x:
-    2. Exercise 3 - :x:
-    2. Exercise 4 - :x:
-    2. Exercise 5 - :x:
-    2. Exercise 6 - :x:
-    2. Exercise 7 - :x:
-    2. Exercise 8 - :x:
+    2. Exercise 1 - :heavy_check_mark:
+    2. Exercise 2 - :heavy_check_mark:
+    2. Exercise 3 - :heavy_check_mark:
+    2. Exercise 4 - :heavy_check_mark:
+    2. Exercise 5 - :heavy_check_mark:
+    2. Exercise 6 - :heavy_check_mark:
+    2. Exercise 7 - :heavy_check_mark:
+    2. Exercise 8 - :heavy_check_mark:
 3. **Chapter 3**
     3. Exercise 1 - :x:
     3. Exercise 2 - :x:
