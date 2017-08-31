@@ -1,0 +1,16 @@
+Per confrontare il metodo delle secanti con quello di Newton abbiamo creato il codice MatLab:
+\lstinputlisting[language=Matlab]{cap_2/es3/es3.m}
+I risultati ottenuti dall'utilizzo del metodo delle secanti sono: \newline
+\\
+\scalebox{0.7} {
+\begin{tabular}{c|c|c|c|c}
+i & metodo di Newton & metodo delle secanti & \big|newton-$\sqrt{2}$\big| & \big|secanti-$\sqrt{2}$\big|\\
+\hline
+1 & 1.750000000000000e+00 & 1.736842105263158e+00 & 3.357864376269049e-01 & 3.226285428900628e-01 \\
+2 & 1.732142857142857e+00 & 1.732142857142857e+00 & 3.179292947697618e-01 & 3.179292947697618e-01 \\
+3 & 1.732050810014727e+00 & 1.732050934706042e+00 & 3.178372476416318e-01 & 3.178373723329468e-01 \\
+4 & --------- & 1.732050807572255e+00 & ------- & 3.178372451991598e-01\\
+\end{tabular}
+}
+\\ \newline
+Si nota dalla tabella che \( \big|newton-\sqrt{2}\big| \approx  \big|secanti-\sqrt{2}\big| \), cioè che l'ordine di grandezza dell'errore assoluto tra i due metodi è lo stesso. Si può quindi affermare che l'uso del metodo di Newton o del metodo delle secanti è equivalente.
