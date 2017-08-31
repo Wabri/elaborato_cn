@@ -1,14 +1,15 @@
-Dal momento che le variabili intere di 2 byte in Fortran vengono gestite in Modulo e Segno, la variabile \texttt{numero}, inizializzata con
+Dal momento che le variabili intere di 2 byte in Fortran vengono gestite in Modulo e Segno, la variabile \texttt{numero} inizializzata con:
 \begin{verbatim}
 integer*2 numero
 \end{verbatim}
-varia tra \( -32768 \leq \texttt{numero} \leq 32767 \) (\( - 2^{15} \leq \texttt{numero} \leq 2^{15} - 1 \)). Durante la terza iterazione del primo ciclo for si arriva al valore massimo rappresentabile tramite gli interi a 2 byte, alla quarta iterazione si avrà quindi la somma del \texttt{numero} in modulo e segno:
+varia tra \( -32768 \leq \texttt{numero} \leq 32767 \) (\( - 2^{15} \leq \texttt{numero} \leq 2^{15} - 1 \)). \\ 
+Durante la terza iterazione del primo ciclo for si arriva al valore massimo rappresentabile tramite gli interi a 2 byte; alla quarta iterazione si avrà quindi la somma del \texttt{numero} in modulo e segno:
 \[
 (32767)_{10}+(1)_{10} = (0111111111111111)_{2,MS} + (0000000000000001)_{2,MS} = 
 \] \( 
 = (1000000000000000)_{2,MS} = (-32768)_{10} 
 \) \\ \\
-Nel secondo ciclo for durante la quinta iterazione, al \texttt{numero} viene sottratto 1:
+Nel secondo ciclo for, durante la quinta iterazione, al \texttt{numero} viene sottratto 1:
 \[
 (-32768)_{10}-(1)_{10} = (1000000000000000)_{2,MS} - (0000000000000001)_{2,MS} = 
 \] \( 
