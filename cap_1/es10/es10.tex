@@ -6,8 +6,8 @@ Per risolvere questo problema è necessario prendere il massimo valore tra le du
 \[
 m = max\{|x|,|y|\}
 \]
-E moltiplicare e dividere per questo valore:
+e moltiplicare e dividere per questo valore:
 \[
 \sqrt{x^2 + y^2} = m\cdot\frac{\sqrt{x^2+y^2}}{m} = m\cdot\sqrt{\frac{x^2+y^2}{m^2}} = m\cdot\sqrt{\biggl(\frac{x}{m}\biggr)^2+\biggl(\frac{y}{m}\biggr)^2}
 \]
-In questo modo si eviterà il problema di overflow, il problema è ben \newline condizionato dato che potenza e radice sono ben condizionate e grazie alla modifica proposta.
+In questo modo si eviterà il problema di overflow, il problema è ben condizionato dato che potenza e radice sono ben condizionate e grazie alla modifica proposta indicata sopra.
