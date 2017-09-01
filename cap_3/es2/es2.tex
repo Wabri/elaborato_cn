@@ -1,0 +1,19 @@
+\begin{flushleft}
+Una matrice triangolare inferiore $L \in M_{n \times n}$ è detta a diagonale unitaria se i suoi elementi sulla diagonale sono pari a 1:
+\[
+l_{i,i}=1 \hspace{15pt} \forall i \in [1,..,n] 
+\]
+Prendiamo una seconda matrice $K \in M_{n \times n}$ triangolare inferiore a diagonale unitaria, calcoliamo il prodotto tra $K$ e $L$:
+\[
+\sum_{m=1}^n l_{i,m} \cdot k_{m,j} = \underbrace{ \sum_{i<j} l_{i,m} \cdot k_{m,j} }_{0} + \underbrace{ \sum_{i=j} l_{i,m} \cdot k_{m,i} }_{1} + \sum_{i>j} l_{i,m}\cdot k_{m,j}
+\]
+La risultante matrice assume valori:
+\begin{itemize}
+\item $\sum_{i<j} l_{i,m} \cdot k_{m,j} = 0 \hspace{15pt} \forall i,j \in [1,..,n] $ 
+\item $\sum_{i=j} l_{i,m} \cdot k_{m,j} = 1 \hspace{15pt} \forall i,j \in [1,..,n] $ 
+\item $\sum_{i>j} l_{i,m} \cdot k_{m,j} \in  \mathbb{R} \hspace{15pt} \forall i,j \in [1,..,n] $ 
+\end{itemize}
+che non è altro che la definizione di matrice triangolare inferiore a diagonale unitaria, come volevamo dimostrare.\\
+
+(Allo stesso modo si può dimostrare per matrici triangolari superiori).
+\end{flushleft}
