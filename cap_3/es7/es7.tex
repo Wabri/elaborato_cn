@@ -1,0 +1,28 @@
+\begin{flushleft}
+Per essere SDP una matrice $A \in \mathbb{R}^{n \times n}$ deve sottostare a due proprietà:
+\begin{itemize}
+    \item
+    deve essere simmetrica, cioè $A=A^T$;
+    \item 
+    $\forall x \in \mathbb{R}^n$ tale che $x \neq 0$ vale $x^TAx>0$
+\end{itemize}
+La matrice $A$ essendo non singolare è anche SDP.
+Le matrici $AA^T$ e $A^TA$ per essere SDP devono dimostrare le proprietà sopra:
+\begin{itemize}
+    \item simmetriche: 
+    \[
+    (AA^T)^T = (A^T)^TA^T = AA^T
+    \]
+    \[
+    (A^TA)^T = A^T(A^T)^T = A^TA.
+    \]
+    \item definite positive:
+    \[
+    x^TAA^Tx = xx^TAA^Txx^T = x(A^Tx)^T(x^TA)^Tx^T = (\underbrace{x^TA^Tx}_{>0})^T \cdot (\underbrace{x^TAx}_{>0})^T > 0
+    \]
+    \[
+    x^TA^TAx = xx^TA^TAxx^T = x(Ax)^T(x^TA^T)^Tx^T = (\underbrace{x^TAx}_{>0})^T \cdot (\underbrace{x^TA^Tx}_{>0})^T > 0
+    \]
+\end{itemize}
+possiamo quindi affemrare che le matrici $AA^T$ e $A^TA$ sono SDP.
+\end{flushleft}

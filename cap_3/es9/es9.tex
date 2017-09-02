@@ -1,0 +1,19 @@
+\begin{flushleft}
+La matrice $A\in\mathbf{R}^{n \times n}$ può essere scritta come:
+\[
+A=\frac{A}{2}+\frac{A}{2}+\frac{A^T}{2}-\frac{A^T}{2}=\frac{A+A^T}{2}+\frac{A-A^T}{2} \equiv A_s+A_a
+\]
+si ha quindi che $A_s \equiv \frac{1}{2}\cdot(A+A^T)$ e $A_a \equiv \frac{1}{2} \cdot (A-A^T)$. \newline
+Possiamo inoltre dimostrare che preso un $x \in \mathbf{R}^n$ risulta:
+\[
+x^TAx=x^T(A_s+A_a)x=x^TA_sx+x^TA_ax=x^TA_sx+x^T\frac{(A-A^T)}{2}x =
+\]
+\[
+= x^TA_sx+\underbrace{\frac{1}{2}(x^TAx-x^TA^Tx)}_{=0} = x^TA_sx
+\]
+il termine $\frac{1}{2}(x^TAx-x^TA^Tx)=\frac{1}{2}(x^TAx-(Ax)^Tx)$ è pari a zero e possiamo vederlo tramite la sostituzione $y=Ax$:
+\[
+x^TAx-(Ax)^Tx \underbrace{=}_{y=Ax} x^Ty-y^Tx = 0
+\]
+dato che $x^Ty=y^Tx$ allora la loro differenza non può essere altro che zero.
+\end{flushleft}
