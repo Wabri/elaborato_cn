@@ -1,0 +1,23 @@
+\begin{flushleft}
+Indichiamo con $A \in M_{n \times n}$ una matrice triangolare inferiore con elementi sulla diagonale non nulli, tale matrice può essere scritta come:
+\[
+A = D(I_n+U)
+\]
+in cui $D$ è una matrice diagonale dove $diag(D)=diag(A)$, la matrice $I_n$ è la matrice identità e U è una matrice strettamente triangolare inferiore, cioè con diagonale nulla, e gli unici elementi non nulli sono gli stessi elementi della matrice $A$. Una matrice strettamente triangolare inferiore è anche una matrice nilpotente, questo significa che $\exists n \in \mathbb{R}$ tale che $U^n = 0_{n \times n}$. Dobbiamo quindi dimostrare che $A^{-1}$ è ancora una matrice triangolare inferiore, se $A^{-1}$ è l'inversa $A$ deve valere:
+\[
+A\cdot A^{-1} = D(I_n+U) \cdot A^{-1} = I_n
+\]
+\[
+A^{-1} = (I_n+U)^{-1} \cdot D^{-1}
+\]
+Sappiamo che l'inversa di una matrice diagonale è ancora una matrice diagonale, quindi $D^{-1}$ è diagonale. Per scoprire che tipo di matrice è $(I_n+U)^{-1}$ è necessario sviluppare in serie:
+\[
+(I_n+U)^{-1}=I_n-U+U^2-...+(-1)^{n-1}U^{n-1}
+\]
+che sono somme di matrici strettamente triangolari inferiori, questo implica che $(I_n+U)^{-1}$ è di quel tipo. Abbiamo quindi dimostrato che anche $A^{-1}$ è una matrice triangolare inferiore.
+\\
+
+Nel caso in cui $A$ sia una matrice triangolare inferiore a diagonale unitaria la dimostrazione non varia dato che gli elementi dell'inversa di $D$ rimangono unitari nel processo di inversione.\\
+
+(Allo stesso modo si può dimostrare per matrici triangolari superiori).
+\end{flushleft}

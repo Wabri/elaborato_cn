@@ -1,0 +1,13 @@
+\begin{flushleft}
+Prendiamo $i \in [1,...,n]$ colonne della matrice, possiamo vedere che l'algoritmo esegue $i-1$ somme di 2 prodotti quindi $2(i-1)$ e in più esegue un'operazione di sottrazione e una di divisione che equivale a 2 flop. Queste operazioni vengono eseguite per $n-i$ volte, cioè per ogni colonna della matrice, il che significa che il numero di flop sono:
+\[
+\sum_{i=1}^{n} 2(i-1)(n-i) = 2\sum_{i=1}^{n} (i\cdot n - i^2 - n) = 2(n\sum_{i=1}^{n}i -\sum_{i=1}^{n} i^2 - n^2) =
+\]
+\[
+= 2\Big(n\frac{n(n-1)}{2}+n^2-\frac{n(n-1)(2n-1)}{6}-n^2\Big) = 2\Big(\frac{n^3}{2} -\frac{n^2}{2} - \frac{2n^3}{6} + \frac{n^2}{6} + \frac{2n^2}{6} - \frac{n}{6}\Big) =
+\]
+\[
+= n^3 - n^2 - \frac{2n^3}{3} + \frac{n^2}{3} + \frac{2n^2}{3} - \frac{n}{3} \approx \frac{n^3}{3}
+\]
+quindi l'algoritmo di fattorizzazione $LDL^T$ ha un costo di $\frac{n^3}{3} flop$.
+\end{flushleft}

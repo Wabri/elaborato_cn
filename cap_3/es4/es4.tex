@@ -1,0 +1,17 @@
+\begin{flushleft}
+L'eliminazione nella prima colonna richiede $n$ somme ed $n$ prodotti per $n-1$ righe, quindi in totale $(n+n)(n-1) = 2n(n-1)$ \texttt{flops}. L'eliminazione della seconda richiede $n-1$ somme ed $n-1$ prodotti per $n-2$ righe, quindi in totale $[(n-1)+(n-1)](n-2) = 2(n-1)(n-2)$ \texttt{flops}.\\
+Procedendo per induzione si ha che il numero totale di operazioni \'e
+\[
+\sum_{i=0}^{n} 2(n-i)(n-i+1).
+\]
+Operando la sostituzione $j = n-i+1$ si ha che la somma diviene :
+\[
+2 \sum_{j=n+1}^{1} j(j-1) = 2\Big( \sum_{j=1}^{n+1}j^2 + \sum_{j=1}^{n+1}j\Big) = 2\Big(\sum_{j=1}^{n-1}j^2 + n^2 + (n+1)^2 + \sum_{j=1}^{n-1}j +n +n+1 \Big) =
+\]
+\[
+= 2\Big( \frac{n\cdot (n-1)\cdot(2n-2)}{6} + \frac{n\cdot(n-1)}{2} + 2n^2 +3n +2 \Big) = 2\Big(\frac{2n^3-4n^2+2n}{6} +\frac{n^2-n}{2} + 2n^2 +3n +2\Big) \leq \frac{2}{3}\cdot n^3
+\]
+\\
+
+quindi si ha che il numero di flop è $\frac{2}{3}\cdot n^3$, come volevamo dimostrare
+\end{flushleft}

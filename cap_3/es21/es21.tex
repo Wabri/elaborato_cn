@@ -1,0 +1,17 @@
+\begin{flushleft}
+Un punto stazionario $(\hat{x_1}, \hat{x_2})$ è tale per cui $J(\hat{x_1},\hat{x_2})=0$. 
+Il sistema lineare è definito quindi da:
+\[
+F(\underline{x})=\underline{0}\mbox{ con }F=\begin{pmatrix}\frac{\partial f}{\partial x_1}\\\frac{\partial f}{\partial x_2}\end{pmatrix}=\begin{pmatrix}4x_1^3+2x_1+x_2\\x_1+2x_2-2\end{pmatrix}.
+\]
+Il Jacobiano della funzione è quindi dato da: 
+\[ 
+J=\begin{pmatrix} 12x_1^2+2 & 1  \\\ 1 & 2 \end{pmatrix}
+\]
+da cui si ottiene il minimo della funzione:
+\[
+\min{f(x_1,x_2)}\approx -0.2573
+\]
+Il codice matlab per il calcolo del minimo è:
+\lstinputlisting[language=Matlab]{cap_3/es21/es21.m}
+\end{flushleft}

@@ -1,0 +1,19 @@
+\begin{flushleft}
+\lstinputlisting[language=Matlab]{cap_3/es15/es15.m}
+Il codice MatLab sopra restituisce in output:
+\begin{lstlisting}[language=matlab, basicstyle = \small]
+ans =
+    101.000000000000e+000
+ans =
+    101.000000000000e+000
+Warning: Matrix is close to singular or badly scaled.
+Results may be inaccurate. RCOND =  9.801980e-21. 
+> In cond (line 46)
+  In es15 (line 7) 
+ans =
+    102.020202020202e+018
+\end{lstlisting}
+Analiticamente abbiamo che $\rVert A \rVert_{\infty} = \rVert A \rVert_1 = 101$, come \'e possibile verificare attraverso l'istruzione norm di Matlab.
+Per quanto riguarda il calcolo del numero di condizionamento $k_{\infty}(A)$ abbiamo che, andando a calcolare l'inversa, gli elementi della matrice crescono di 2 ordini di grandezza per ogni riga, arrivando ad avere valori prossimi a $10^{18}$. Questo implica che $\rVert A^{-1} \rVert_{\infty}>10^{20}$ per cui possiamo affermare che il problema \'e malcondizionato.
+La verifica con l'istruzione cond di Matlab restituisce un warning in cui avverte che $RCOND=9.801980e-21$, confermando quanto appena detto.
+\end{flushleft}

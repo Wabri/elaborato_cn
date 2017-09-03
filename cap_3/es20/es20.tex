@@ -1,0 +1,31 @@
+\begin{flushleft}
+La funzione data è \[F(x_1, x_2)= \begin{cases}x_2-cos(x_1)\\ x_1x_2 -1/2\end{cases}\]
+Vogliamo trovare $F(x_1, x_2)=0$ partendo da $x_1(0) = 1\mbox{, } x_2(0) = 1$\\
+Troviamo quindi il Jacobiano della funzione: 
+\[ 
+J=\begin{pmatrix} sin(x_1) & 1  \\\ x_1 & x_2 \end{pmatrix}
+\]
+Applicando il metodo di Newton si va a risolvere:
+\[
+\begin{cases} 
+J_F(\underline{x}^{(k)})\underline{d}^{(k)}=-F(\underline{x}^{(k)}) \\ 
+\quad \underline{x}^{(k+1)}=\underline{x}^{(k)}+\underline{d}^{(k)} 
+\end{cases}
+\]
+Usando il codice MatLab dell'esercizio successivo (\texttt{Esercizio 21}), si ottengono i risultati sotto:
+\[
+ x_1 = 0.6100 \mbox{ e } x_2 =0.8196
+\]
+con la rispettiva tabella:
+\begin{center}
+\begin{tabular}{l|c|c|c}
+i & $x_1$ & $x_2$ & Norma incremento \\
+\hline
+1 & 0.7458 & 0.7542 & 0.5001 \\
+2 & 0.5531 & 0.8653 & 0.3145 \\
+3 & 0.6042 & 0.8241 & 0.0929 \\
+4 & 0.6100 & 0.8197 & 0.0102 \\
+5 & 0.6100 & 0.8196 & 0.00013 \\ 
+\end{tabular}
+\end{center}
+\end{flushleft}
