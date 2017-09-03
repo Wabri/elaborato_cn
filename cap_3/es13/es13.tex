@@ -1,0 +1,33 @@
+\begin{flushleft}
+Per verificarlo abbiamo usato il seguente codice MatLab:
+\lstinputlisting[language=Matlab]{cap_3/es13/es13.m}
+Che restituisce l'output:
+\begin{lstlisting}[language=matlab, basicstyle = \small]
+A1 =
+     1     1     1     1
+     1     2     2     2
+     1     2     3     3
+     1     2     3     4
+L1 =
+     1     0     0     0
+     1     1     0     0
+     1     1     1     0
+     1     1     1     1
+D1 =
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+A2 =
+     1     1     1     1
+     1     2     2     2
+     1     2     3     3
+     1     2     3     2
+Error using factLDLT (line 14)
+[Errore] La matrice non e' SDP
+Error in es13 (line 6)
+[L2,D2] = factLDLT(A2) 
+\end{lstlisting}
+L'output è molto chiaro, la seconda matrice $A_{2}$ non può essere fattorizzata $LDL^T$ di conseguenza non è $SDP$.
+\end{flushleft}
+

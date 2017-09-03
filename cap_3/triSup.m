@@ -1,4 +1,4 @@
-function [b] = TriSup(A, b)
+function [b] = triSup(A, b)
     for j=size(A):-1:1
         if A(j,j)==0
             error('[Attenzione] La matrice non e'' singolare')
