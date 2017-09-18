@@ -1,10 +1,16 @@
 Sapendo che la mantissa in decimale è calcolabile tramite la funzione:
 \begin{itemize}
-\item \( m = 1- log_{10}{u} \) (troncamento) 
+\item \( m = 1- log_{10}{(u)} \) (troncamento) 
 \item \( m = 1- log_{10}{(2\cdot u)} \) (arrotondamento)
 \end{itemize}
-e che la precisione di macchina assuma un valore accettabilmente piccolo in modo tale che il \(log_{10}{u} \approx 1\), cioè $0\leq u<1$, allora è possibile scrivere:
+e che la precisione di macchina assuma un valore accettabilmente piccolo in modo tale che il \(log_{10}{u} >> 1\) allora è possibile scrivere:
 \begin{itemize}
 \item \( m = 1 - log_{10}{u} \approx -log_{10}{u} \) (troncamento)
 \item \( m = 1 - log_{10}{2u} = 1 - log_{10}{2} - log_{10}{u} \approx -log_{10}{u} \) (arrotondamento)
 \end{itemize}
+Possiamo fare l'esempio con i valori $b=10$ e $u \approx 4.66 \cdot 10^{-10}$ ottenendo così:
+\begin{itemize}
+\item \( m = 10.3316 \) (troncamento)
+\item \( m = 10.0306 \) (arrotondamento)
+\end{itemize}
+che è una buona approssimazione di $-log_{10}{u} = {9.33161}$.

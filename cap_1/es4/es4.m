@@ -8,7 +8,7 @@ for i=1:12
 end
 
 for j=1:12
-    f(j)=lim(0,v(j));
+    f(j)=lim(0,h(j));
 end
 
 f
