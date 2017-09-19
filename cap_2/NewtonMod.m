@@ -1,9 +1,9 @@
-function [y, i] = NewtonMod(f, df, m, x0, imax, tol, output)
+function [y, i] = NewtonMod(f, df, m, x0, imax, tol)
     format long;
     i = 0;
     x = x0;
-    vai=1;
-    while((i < imax) && vai) 
+    diverror=1;
+    while((i < imax) && diverror) 
         i = i+1;
         fx = feval(f, x0);
         dfx = feval(df, x0);
@@ -13,16 +13,9 @@ function [y, i] = NewtonMod(f, df, m, x0, imax, tol, output)
             break;
         end
         if(abs(x-x0)<tol)
-            vai = 0;
+            diverror = 0;
         end
         x0 = x;
-    end
-    if(output)
-        if(vai)
-            disp('[Errore] Tolleranza non calcolabile');
-        else
-           disp(i);
-        end
     end
     y = x;
 end

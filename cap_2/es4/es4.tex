@@ -3,16 +3,19 @@ Questo codice esegue i metodi di Newton, Newton modificato e Aitken per le funzi
 L'output della $f_{1}(x)$ rispetto alle diverse tolleranze sono:
 
 \begin{center}
-\begin{tabular}{c|c|c}
-tolx & Newton modificato & Aitken \\
+\begin{tabular}{|c|c|c|c|}
 \hline
-1 & 3.014159265358979 & 3.141592653589755 \\
-0.1 & 3.014159265358979 & 3.141592653589789 \\
-0.01 & 3.057983607571556 & 3.141592653589789 \\
-0.001 & 3.133359078021984 & --------------- \\ 
-0.0001 & 3.140781835025782 & --------------- \\
-0.00001 & 3.140862916882183 & --------------- \\
-0.000001 & 3.140862916882183 & --------------- \\
+tolx & Newton & Newton modificato & Aitken \\
+\hline
+$10^{-1}$ & 4.030463126315021 & 4.030463126315021 & 3.141592653589755 \\
+$10^{-2}$ & 3.229126031324792 & 3.229126031324792 & 3.141592653589789 \\
+$10^{-3}$ & 3.150212685926121 & 3.151170467296823 & 3.141592653589789 \\
+$10^{-4}$ & il metodo non converge & 3.151170467296823 & --------------- \\ 
+$10^{-5}$ & il metodo non converge & 3.151170467296823 & --------------- \\
+$10^{-6}$ & il metodo non converge & 3.151170467296823 & --------------- \\
+$10^{-7}$ & il metodo non converge & 3.151170467296823 & --------------- \\
+$10^{-1}$ & il metodo non converge & 3.151170467296823 & \\
+\hline
 \end{tabular}
 \end{center}
 
@@ -20,6 +23,7 @@ L'output della \(f_{2}(x)\) rispetto alle diverse tolleranze è: \newline
 
 \begin{center}
 \begin{tabular}{c|c|c}
+\hline
 tolx & Newton modificato & Aitken \\
 \hline
 1 & 3.014571920744193 & 3.137995613065127 \\
@@ -31,3 +35,66 @@ tolx & Newton modificato & Aitken \\
 0.000001 & 3.140885428300940 & --------------- \\
 \end{tabular} \\
 \end{center}
+
+aitken funct 1
+[Errore] Divisione per 0
+A11 =
+   3.141592653589781
+[Errore] Divisione per 0
+A12 =
+   3.141592653589781
+[Errore] Divisione per 0
+A13 =
+   3.141592653589781
+[Errore] Divisione per 0
+A14 =
+   3.141592653589781
+metodo newton funct 2
+N21 =
+   4.200823975656096
+N22 =
+   3.226469748549500
+il metodo non converge
+N23 =
+   3.154537411727535
+il metodo non converge
+N24 =
+   3.154537411727535
+il metodo non converge
+N25 =
+   3.154537411727535
+il metodo non converge
+N26 =
+   3.154537411727535
+il metodo non converge
+N27 =
+   3.154537411727535
+il metodo non converge
+N28 =
+   3.154537411727535
+newton modificato funct 2
+NM21 =
+   4.200823975656096
+NM22 =
+   3.226469748549500
+NM23 =
+   3.155971137121292
+NM24 =
+   3.155971137121292
+NM25 =
+   3.155971137121292
+NM26 =
+   3.155971137121292
+NM27 =
+   3.155971137121292
+NM28 =
+   3.155971137121292
+aitken funct 2
+A21 =
+   3.140645194956157
+A22 =
+   3.141592492095279
+A23 =
+   3.141592492095279
+A24 =
+   3.141592516390607
