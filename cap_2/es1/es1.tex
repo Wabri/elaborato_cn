@@ -1,12 +1,29 @@
-
+Per ricercare la radice quadrata di un numero è possibile sfruttare una modifica al problema delle radici di una funzione. Infatti partendo da $x=\sqrt{\alpha}$ è possibile svilupparla trovando una funzione $f(x)$ utilizzabile nel metodo di Newton:
+\[
+x = \sqrt{\alpha} 
+\]
+\[
+x^{2} = \big(\sqrt{\alpha}\big)^{2} 
+\]
+\[
+x^{2} - \alpha = 0
+\]
+possiamo quindi considerare $f(x) = x^{2} - \alpha$ e $f'(x) = 2\cdot x$ . La procedura iterativa è definita quindi da:
+\[
+x_{n+1} = x_{n} - \frac{f(x_{n})}{f'(x_{n})} = x_{n}-\frac{x_{n}^2-\alpha}{2\cdot x_{n}} = x_{n} - \frac{x_{n}}{2} + \frac{\alpha}{2\cdot x_{n}} = \frac{x_{n}}{2}+\frac{\alpha}{2\cdot x_{n}} = \frac{1}{2} \cdot \Big(x_{n}+\frac{\alpha}{x_{n}}\Big)
+\]
+che ci permette di implementare il seguente script matlab e la funzione y = NewtonSqrt(alpha, x\_0, imax, tol):
 \lstinputlisting[language=matlab]{cap_2/es1/es1.m}
-La tabella delle approssimazioni è la seguente:
+Che restituisce in output valori che abbiamo rappresentato nella tabella seguente:
 \begin{center}
-\begin{tabular}{c|lc}
-i & \( x_i \) \\
+\begin{tabular}{|c|c|}
+\hline
+$i$ & \( x_i \) \\
 \hline
 1 & 1.750000000000000e+00 \\
 2 & 1.732142857142857e+00 \\
 3 & 1.732050810014727e+00 \\
+4 & 1.732050807568877e+00 \\
+\hline
 \end{tabular}\\
 \end{center}
