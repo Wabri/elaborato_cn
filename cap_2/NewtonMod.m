@@ -1,17 +1,12 @@
-function [y, i] = NewtonMod(f, df, m, x0, imax, tol)
-    format long;
+function [y, i] = NewtonMod(fx, dfx, m, x0, imax, tol)
     i = 0;
     x = x0;
     diverror=1;
     while((i < imax) && diverror) 
         i = i+1;
-        fx = feval(f, x0);
-        dfx = feval(df, x0);
-        if(dfx ~= 0)
-            x = x0 - m * fx / dfx;
-        else
-            break;
-        end
+        fx0 = feval(fx, x0);
+        dfx0 = feval(dfx, x0);
+        x = x0 - m * fx0 / dfx0;
         if(abs(x-x0)<tol)
             diverror = 0;
         end
