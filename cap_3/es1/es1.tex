@@ -3,14 +3,11 @@ Una matrice $L\in M_{n\times n}$ è definita triangolare inferiore se preso $l_{
 \[
 l_{i,j}=0 \hspace{15pt} \forall i<j \hspace{10pt} i,j \in [1,..,n] 
 \]
-Possiamo dimostrare facilmente che la somma di due matrici triangolari inferiori è ancora una matrice triangolare inferiore. Prendiamo due matrici $L,K \in M_{n \times n}$ per definizione di triangolare inferiore si deve valere che:
+Possiamo dimostrare facilmente che la somma di due matrici triangolari inferiori è ancora una matrice triangolare inferiore. Prendiamo due matrici $L,K \in M_{n \times n}$ con relativi elementi $l_{ij} \in L$ e $k_{ij} \in K$ per definizione di triangolare inferiore deve valere che:
 \[
 l_{i,j} + k_{i,j} = 0 + 0 = 0 \hspace{15pt} \forall i<j \hspace{10pt} i,j \in [1,..,n] 
 \]
-che è la definizione di matrice triangolare inferiore, come volevasi dimostrare. \\
-
-Dimostriamo ora che il prodotto di due matrici triangolari inferiori è ancora una matrice triangolare inferiore.
-Indichiamo con $A \in M_{n \times n}$ la matrice risultante del prodotto delle 2 matrici $L$ e $K$, gli elementi della nuova matrice, $a_{i,j} \in A$, sono calcolati come la somma del prodotto degli elementi delle due matrici:
+che è la definizione di matrice triangolare inferiore, come volevasi dimostrare. Dimostriamo ora che il prodotto di due matrici triangolari inferiori è ancora una matrice triangolare inferiore. Indichiamo con $A \in M_{n \times n}$ la matrice risultante del prodotto delle 2 matrici $L$ e $K$, gli elementi della nuova matrice $a_{i,j} \in A$ sono calcolati come segue:
 \[
 a_{i,j} = \sum_{m=1}^n l_{i,m} \cdot k_{m,j} \hspace{35pt} \forall i,j \in [1,..,n].
 \]

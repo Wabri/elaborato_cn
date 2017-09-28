@@ -1,23 +1,21 @@
-function [sol,nit]=bisect(f,a,b,tolx,maxit);
-    nit=maxit;
-    j=0;
-    if(subs(f,a)*subs(f,b)>0)
-        disp('[Warning] il metodo non puo'' essere usato');
-    else
-        while(j<=maxit)
-            sol=(a+b)/2;
-            ff=subs(f,sol);
-            if(abs(ff)<=tolx)
-                nit=j;
-                break;
-        end
-        fa=subs(f,a);
-        fm=subs(f,sol);
-        if(fa*fm<=0)
-            b=sol;
+function [x,i]=bisect(f,a,b,tol)
+    fa = feval (f,a);
+    fb = feval (f,b);
+    x = (a+b)/2;
+    fx = feval(f,x);
+    imax = ceil (log2(b-a) - log2(tol));
+    for i=2:imax
+        f1x = abs((fb-fa)/(b-a));
+        if abs(fx)<=tol*f1x
+            break
+        elseif fa*fx<0
+            b=x;
+            fb=fx;
         else
-            a=sol;
+            a=x;
+            fa=fx;
         end
-        j=j+1; 
+        x = (a+b)/2;
+        fx = feval(f,x);
     end
 end
