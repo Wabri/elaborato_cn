@@ -1,26 +1,26 @@
-function y = Aitken( f, df, x0, imax, tol )
-    format long;
+function y = Aitken( fx, dfx, x0, imax, tol )
     i = 0;
-    vai=1;
-
-    while((i < imax) && vai)
-        x1 = NewtonMod(f, df, 1, x0, 1, tol, 0);
-        x2 = NewtonMod(f, df, 1, x1, 1, tol, 0);
-        i = i+1;
-        if((x0 - 2*x1 +x2) == 0)
-            disp('[Errore] Divisione per 0');
-            vai = 0;
+    x=x0;
+    diverror=1;
+    while((i < imax) && diverror)
+        i=i+1;
+        x0=x;
+        fx0 = feval(fx,x0);
+        dfx0 = feval(dfx,x0);
+        x1 = x0 - fx0/dfx0;
+        fx0 = feval (fx,x1);
+        dfx0 = feval (dfx, x1);
+        x = x1 - fx0/dfx0;
+        if (x-2*x1+x0 == 0)
+            disp('divisione per zero');
+            diverror = 0;
             break;
         end
-        x = (x2*x0 - x1^2)/(x0 - 2*x1 +x2);
-        if(abs(x-x0)<tol)
-            vai = 0;
-        end
-        x0 = x;
+        x = (x*x0-x1^2)/(x-2*x1+x0);
+        diverror = abs(x-x0)>tol;
     end
-    if(vai)
-        disp('[Errore] Tolleranza non calcolabile');
-        disp(i);
+    if(diverror)
+        disp('Il metodo non converge');
     end
     y = x;
 end

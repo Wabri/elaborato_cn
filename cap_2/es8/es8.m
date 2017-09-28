@@ -1,5 +1,7 @@
-myfunct = @(x) (x-pi)^(10*x);
-dfdx =  @(x) 10*((x-pi)^(10*x))*(x/(x-pi)+log(x-pi));
-x0 = 0;
+f = @(x) (x-pi)*(exp(1)^(10*x));
+df =  @(x) (exp(1)^(10*x))*(10*x-10*pi+1);
 
-y = NewtonMod(myfunct,dfdx, 1, x0, 5, 0.01, 1);
+disp('Con punto iniziale x0=0');
+[res,nit] = Newton(f,df, 0, 100, 10^(-2))
+disp('Con punto iniziale x0=4');
+[res,nit] = Newton(f,df, 4, 100, 10^(-2))

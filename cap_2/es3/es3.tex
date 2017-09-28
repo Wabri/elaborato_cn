@@ -1,16 +1,34 @@
-Per confrontare il metodo delle secanti con quello di Newton abbiamo creato il codice MatLab:
+\begin{flushleft}
+Per ricercare la radice quadrata di un numero è possibile sfruttare una modifica al problema delle radici di una funzione. Infatti partendo da $x=\sqrt{\alpha}$ è possibile svilupparla trovando una funzione $f(x)$ utilizzabile per il metodo delle secanti:
+\[
+x = \sqrt{\alpha} 
+\]
+\[
+x^{2} = \big(\sqrt{\alpha}\big)^{2} 
+\]
+\[
+x^{2} - \alpha = 0
+\]
+possiamo quindi considerare $f(x) = x^{2} - \alpha$. La procedura iterativa è definita quindi da:
+\[
+x_{n+1} = \frac{(x_n^2-\alpha)\cdot x_{n-1} - (x_{n-1}^2-\alpha)x_n}{x_n^2-x_{n-1}^2} = \frac{\alpha\cdot (x_n-x_{n-1})+x_n\cdot x_{n-1}\cdot (x_n - x_{n-1})}{(x_n+x_{n-1})\cdot (x_n-x_{n-1})} = \frac{\alpha+x_n\cdot x_{n-1}}{x_n+x_{n-1}}
+\]
+che ci permette di implementare il seguente script matlab e la funzione y = SecSqrt(alpha, x\_0, imax, tol):
 \lstinputlisting[language=matlab]{cap_2/es3/es3.m}
-I risultati ottenuti dall'utilizzo del metodo delle secanti sono: \newline
-\\
+I risultati ottenuti dall'utilizzo del metodo delle secanti sono: \newline \\
 \scalebox{0.9} {
-\begin{tabular}{c|c|c|c|c}
-i & metodo di Newton & metodo delle secanti & \big|newton-$\sqrt{2}$\big| & \big|secanti-$\sqrt{2}$\big|\\
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-1 & 1.750000000000000e+00 & 1.736842105263158e+00 & 3.357864376269049e-01 & 3.226285428900628e-01 \\
-2 & 1.732142857142857e+00 & 1.732142857142857e+00 & 3.179292947697618e-01 & 3.179292947697618e-01 \\
-3 & 1.732050810014727e+00 & 1.732050934706042e+00 & 3.178372476416318e-01 & 3.178373723329468e-01 \\
-4 & --------- & 1.732050807572255e+00 & ------- & 3.178372451991598e-01\\
+i & metodo di Newton & metodo delle secanti & \big|newton-$\sqrt{3}$\big| & \big|secanti-$\sqrt{3}$\big|\\
+\hline
+1 & 1.750000000000000e+00 & 1.736842105263158e+00 & 1.794919243112281e-02 & 4.791297694280772e-03 \\
+2 & 1.732142857142857e+00 & 1.732142857142857e+00 & 9.204957398001312e-05 & 9.204957397979108e-05 \\
+3 & 1.732050810014727e+00 & 1.732050934706042e+00 & 2.445850189047860e-09  & 1.271371643518648e-07 \\
+4 &  1.732050807568877e+00& 1.732050807572256e+00 & 0 & 3.378630708539276e-12 \\
+5 & --------- & 1.732050807568877e+00 & --------- & 2.220446049250313e-16 \\
+\hline
 \end{tabular}
-}
-\\ \newline
-Si nota dalla tabella che \( \big|newton-\sqrt{2}\big| \approx  \big|secanti-\sqrt{2}\big| \), cioè che l'ordine di grandezza dell'errore assoluto tra i due metodi è lo stesso. Si può quindi affermare che l'uso del metodo di Newton o del metodo delle secanti è equivalente.
+} 
+\newline \\
+Dalla tabella possiamo dunque notare che il metodo di Newton arriva più velocemente al valore cercato rispetto al metodo delle secanti.
+\end{flushleft}

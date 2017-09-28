@@ -1,20 +1,15 @@
-function [x,nit,tolf]=secanti(f,x0,x1,tolx,maxit)
-  nit=0;
-  fx0=feval(f,x0);
-  err=abs(x1-x0);
-  while (nit<maxit & err>tolx)
-      fx1=feval(f,x1);
-      dfx1=(fx1-fx0)/(x1-x0);
-      tolf=tolx*abs(dfx1);
-      if abs(fx1)<=tolf
-         break
-      end
-      x2=x1-(fx1/dfx1);
-      err=abs(x2-x1);
-      x0=x1;
-      x1=x2;
-      fx0=fx1;
-      nit=nit+1;
-  end
-  x=x1;
+function [x, i] = secanti(f,df,x0,imax, tol)
+fx = feval(f,x0);
+f1x = feval (df, x0);
+x = x0 - fx/f1x;
+i = 0;
+while (i<imax) & (abs(x-x0)>tol)
+    i = i+1;
+    fx0 = fx;
+    fx = feval(f,x);
+    x1 = (fx*x0-fx0*x)/(fx-fx0);
+    x0 = x;
+    x = x1;
+end
+if (abs(x-x0)>tol), disp('il metodo non converge'), end
 end

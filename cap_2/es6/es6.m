@@ -1,19 +1,20 @@
-myf = @(x) (1-x-(1+cos(10*x)/2)*sin(x));
+f = @(x) (1-x-(1+cos(10*x)/2)*sin(x));
 df = @(x) (5*sin(x)*sin(10*x)-cos(x)*(cos(10*x)/2 + 1)-1);
 
 x0 = 0;
 x1 = 1;
 tol = logspace(-1,-10,10);
-disp(tol);
-imax = 50;
-count = zeros(3,10);
+imax = 100;
+count = zeros(10,3);
+res = zeros(10,3);
 for i=1:10
-    [temp, count(1,i)] = NewtonMod(myf,df,1,x0,imax,tol(i), 0);
-    [temp, count(2,i)] = secanti(myf,x0,x1,tol(i),imax);
-    [temp, count(3,i)] = corde(myf,feval(df,x0),x0,tol(i),imax);
+    [res(i,1), count(i,1)] = Newton(f,df,x0,imax,tol(i));
+    [res(i,2), count(i,2)] = secanti(f,df,x0,imax, tol(i));
+    [res(i,3), count(i,3)] = corde(f,df,x0,imax, tol(i));
 end
 
-disp('nella prima riga ci sono le iterazioni di newton modificato,');
-disp('nella seconda riga ci sono il numero di iterazioni del metodo delle secanti');
-disp('nella terza riga ci sono il numero di iterazioni del metodo delle corde');
+disp('La prima colonna sono riferite al metodo di Newton (iterazioni e risultato)');
+disp('La seconda colonna sono riferite al metodo delle secanti (iterazioni e risultato)');
+disp('La terza colonna sono riferite al metodo delle corde (iterazioni e risultato)');
 count
+res

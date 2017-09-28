@@ -1,20 +1,32 @@
-\lstinputlisting[language=Matlab]{cap_2/es6/es6.m}
 \begin{flushleft}
+\lstinputlisting[language=Matlab]{cap_2/es6/es6.m}
 Il numero di iterazioni effettuate all'interno dei 3 algoritmi, vengono salvate nella variabile count che restituisce i valori sotto forma di tabella:
-\end{flushleft}
 
-\begin{tabular}{|c|l|l|l|}
-$tol_x$ & Newton & Secanti & Tangenti \\
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
 \hline
-$10^{-1}$ & 3 & 13 & 2 \\
-$10^{-2}$ & 4 & 15 & 8 \\
-$10^{-3}$ & 4 & 15 & 15 \\
-$10^{-4}$ & 4 & 16 & 22 \\
-$10^{-5}$ & 5 & 16 & 28 \\
-$10^{-6}$ & 5 & 16 & 35 \\
-$10^{-7}$ & 5 & 17 & 42 \\
-$10^{-8}$ & 5 & 17 & 48 \\
-$10^{-9}$ & 5 & 17 & 50 \\
-$10^{-10}$ & 6 & 17 & 50 \\
+$tol_x$ & Newton & Secanti & Corde \\
+\hline
+$10^{-1}$ & 2 & 3 & 2 \\
+$10^{-2}$ & 3 & 3 & 8 \\
+$10^{-3}$ & 3 & 4 & 15 \\
+$10^{-4}$ & 3 & 5 & 22 \\
+$10^{-5}$ & 4 & 5 & 28 \\
+$10^{-6}$ & 4 & 5 & 35 \\
+$10^{-7}$ & 4 & 5 & 42 \\
+$10^{-8}$ & 4 & 6 & 48 \\
+$10^{-9}$ & 4 & 6 & 55 \\
+$10^{-10}$ & 5 & 6 & 62 \\
 \hline
 \end{tabular}
+\end{center}
+
+Il numero di condizionamento del problema è dato da $k = \frac{1}{\big|f'(x^*)\big|}$. La derivata della nostra funzione è:
+\[
+f'(x) = -1 - cos(x) + 5 \cdot sin(10\cdot x) - \frac{cos^2(10\cdot x)}{2}
+\]
+Essendo la radice $x^*$ della nostra funzione uguale a 0,488944 il relativo numero di condizionamento è dato da:
+\[
+k = \frac{1}{\Big|f'(x^*)\Big|} = \frac{1}{\Big|f'(0,488944)\Big|} = \frac{1}{\Big|-4,27233\Big|} = \frac{1}{4,27233} = 0,234064
+\]
+\end{flushleft}
