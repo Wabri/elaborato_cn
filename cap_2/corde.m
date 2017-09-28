@@ -1,16 +1,15 @@
-function [x,nit]=corde(f,m,x0,tolx,maxit)
-  nit=0;
-  err=tolx+1;
-  x=x0;
-  while (nit<maxit && err>tolx)
-      fx=feval(f,x);
-      tolf=tolx*abs(m);
-      if abs(fx)<=tolf
-         break
-      end
-      x1=x-fx/m;
-      err=abs(x1-x);
-      x=x1;
-      nit=nit+1;
-  end
+function [x,i]=corde(fx,dfx,x0,imax,tol)
+fx0 = feval(fx,x0);
+dfx0 = feval(dfx,x0);
+x = x0 - fx0/dfx0;
+i=0;
+while (i<imax) & (abs(x-x0)>tol)
+    i=i+1;
+    x0=x;
+    fx0=feval(fx,x0);
+    x=x0-fx0/dfx0;
+end
+
+if abs(x-x0)>tol
+    disp('il metodo non converge');
 end

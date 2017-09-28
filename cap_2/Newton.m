@@ -1,4 +1,4 @@
-function x = Newton(fx,dfx, x0, imax, tolx)
+function [x, i] = Newton(fx,dfx, x0, imax, tolx)
 fx0 = feval(fx,x0);
 dfx0 = feval(dfx,x0);
 x = x0 - fx0/dfx0;
