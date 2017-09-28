@@ -43,7 +43,7 @@ The projecct is divided by chapter.
     2. Exercise 8 - :heavy_check_mark:
 3. **Chapter 3**
     3. Exercise 1 - :heavy_check_mark:
-    3. Exercise 2 - :x:
+    3. Exercise 2 - :heavy_check_mark:
     3. Exercise 3 - :x:
     3. Exercise 4 - :x:
     3. Exercise 5 - :x:
