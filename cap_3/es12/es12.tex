@@ -1,2 +1,10 @@
-Il codice MatLab corrispondente alla risoluzione di un sistema lineare con matrice di ingresso fattorizzata LDLT è il seguente:
+\begin{flushleft}
+Supponendo che in ingresso si abbiano le matrici di fattorizzazione $LDL^T$ di una qualsiasi matrice $M \in \mathbb{R}^{n\times n}$ SDP, rispettivamente:
+\begin{itemize}
+    \item L matrice triangolare inferiore a diagonale unitaria
+    \item D matrice diagonale con elementi diagonali positivi
+\end{itemize}
+e b vettore dei termini noti, è possibile scrivere la function linLDL che risolve sistemi lineari:
 \lstinputlisting[language=matlab]{cap_3/linLDLT.m}
+Abbiamo sfruttato le function triInf, triSup e linDiag, la cui implementazione si trova a fine capitolo (pagina \pageref{functcap3}).
+\end{flushleft}

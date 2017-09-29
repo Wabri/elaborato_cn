@@ -12,12 +12,11 @@ A^{-1} = (I_n+U)^{-1} \cdot D^{-1}
 \]
 Sappiamo che l'inversa di una matrice diagonale è ancora una matrice diagonale, quindi $D^{-1}$ è diagonale. Per scoprire che tipo di matrice è $(I_n+U)^{-1}$ è necessario sviluppare in serie:
 \[
-(I_n+U)^{-1}=I_n-U+U^2-...+(-1)^{n-1}U^{n-1}
+(I_n+U)^{-1}= \sum_{i=0}^{n} (-U)^{n} = \underbrace{(-U)^0}_{I_n} + (-U)^1 + (-U)^2 + ... + (-U)^{n-1} + \underbrace{(-U)^{n}}_{0_{n \times n}} =
 \]
-che sono somme di matrici strettamente triangolari inferiori, questo implica che $(I_n+U)^{-1}$ è di quel tipo. Abbiamo quindi dimostrato che anche $A^{-1}$ è una matrice triangolare inferiore.
-\\
-
-Nel caso in cui $A$ sia una matrice triangolare inferiore a diagonale unitaria la dimostrazione non varia dato che gli elementi dell'inversa di $D$ rimangono unitari nel processo di inversione.\\
-
+\[
+= I_n-U+U^2-...+(-1)^{n-1}\cdot U^{n-1}+0_{n \times n}= I_n-U+U^2-...+(-1)^{n-1}\cdot U^{n-1}
+\]
+che sono somme di matrici triangolari inferiori, questo implica che $(I_n+U)^{-1}$ è di quel tipo. Abbiamo quindi dimostrato che anche $A^{-1}$ è una matrice triangolare inferiore. Nel caso in cui $A$ sia una matrice triangolare inferiore a diagonale unitaria la dimostrazione non varia dato che gli elementi dell'inversa di $D$ rimangono unitari nel processo di inversione. 
 (Allo stesso modo si può dimostrare per matrici triangolari superiori).
 \end{flushleft}
