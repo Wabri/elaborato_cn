@@ -1,5 +1,4 @@
-format short
-format compact
+format shortE
 
 x(1)=1;
 x(2)=1;
@@ -9,9 +8,9 @@ tolx=0.0001;
 F = @(x) [x(2) - cos(x(1)); x(1)*x(2)-1/2];
 J = @(x) [sin(x(1)),1 ; x(2), x(1)];
     
-[x] = nonLinearNewton(F, J, x, imax, tolx , 1);
+[x] = nonLinearNewton(F, J, x, imax, tolx , 0);
 
-disp ('Usando l''algoritmo di Newton la radice ottenuta e'': ')
+disp ('Usando l''algoritmo di Newton la radice ottenuta e'': ');
 disp (x);
 disp ('F(x): ');
 disp ([x(2) - cos(x(1)), x(1)*x(2)-1/2]);

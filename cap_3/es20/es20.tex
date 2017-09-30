@@ -12,20 +12,25 @@ J_F(\underline{x}^{(k)})\underline{d}^{(k)}=-F(\underline{x}^{(k)}) \\
 \quad \underline{x}^{(k+1)}=\underline{x}^{(k)}+\underline{d}^{(k)} 
 \end{cases}
 \]
-Usando il codice MatLab dell'esercizio successivo (\texttt{Esercizio 21}), si ottengono i risultati sotto:
-\[
- x_1 = 0.6100 \mbox{ e } x_2 =0.8196
-\]
-con la rispettiva tabella:
+Usando il codice MatLab:
+\lstinputlisting[language=Matlab]{cap_3/es20/es20.m}
+si ottengono i risultati:
+\begin{figure}[h]
+\includegraphics[left, width=200px]{cap_3/es20/es320}
+\end{figure}
+\newline \\
+Che in forma tabellare sono rappresentati da:
 \begin{center}
-\begin{tabular}{l|c|c|c}
+\begin{tabular}{|l|c|c|c|}
+\hline
 i & $x_1$ & $x_2$ & Norma incremento \\
 \hline
-1 & 0.7458 & 0.7542 & 0.5001 \\
-2 & 0.5531 & 0.8653 & 0.3145 \\
-3 & 0.6042 & 0.8241 & 0.0929 \\
-4 & 0.6100 & 0.8197 & 0.0102 \\
+1 & 0.7458 & 0.7542 & 0.50007 \\
+2 & 0.5531 & 0.8653 & 0.31450 \\
+3 & 0.6042 & 0.8241 & 0.09285 \\
+4 & 0.6100 & 0.8197 & 0.01023 \\
 5 & 0.6100 & 0.8196 & 0.00013 \\ 
+\hline
 \end{tabular}
 \end{center}
 \end{flushleft}
