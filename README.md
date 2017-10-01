@@ -17,6 +17,7 @@ The projecct is divided by chapter.
 :heavy_check_mark: : Done.
 :heavy_exclamation_mark: : To be revised.
 :x: To do.
+**Exercize**
     1. Exercise 1 - :heavy_check_mark:
     1. Exercise 2 - :heavy_check_mark:
     1. Exercise 3 - :heavy_check_mark:
