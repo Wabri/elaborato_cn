@@ -1,9 +1,32 @@
 \label{functcap3}
-\subsubsection{Risoluzione sistema lineare}
-\lstinputlisting[language=matlab]{cap_3/triInf.m}
-\lstinputlisting[language=matlab]{cap_3/triSup.m}
-\subsubsection{Risoluzione diagonale matrice LDLT di un sistema lineare}
-\lstinputlisting[language=matlab]{cap_3/linDiag.m}
-\subsubsection{Risoluzione di sistemi di equazioni non lineari mediante Newton}
-\lstinputlisting[language=matlab]{cap_3/nonLinearNewton.m}
-
+\begin{flushleft}
+\subsubsection{Fattorizzazioni}
+\begin{itemize}
+    \item \texttt{Fattorizzazione LU con pivoting parziale}
+\lstinputlisting[language=Matlab]{cap_3/factLUP.m}
+    \item \texttt{Fattorizzazione LDLT}
+\lstinputlisting[language=Matlab]{cap_3/factLDLT.m}
+    \item \texttt{Fattorizzazione QR mediante metodo di Householder}
+\lstinputlisting[language=Matlab]{cap_3/factQRH.m}
+\end{itemize}
+\subsubsection{Function per la risoluzione sistemi lineari}
+\begin{itemize}
+    \item \texttt{Calcolo matrice trinagolare inferiore}
+\lstinputlisting[language=Matlab]{cap_3/triInf.m}
+    \item \texttt{Calcolo matrice trinagolare superiore}
+\lstinputlisting[language=Matlab]{cap_3/triSup.m}
+    \item \texttt{Calcolo diagonale principale}
+\lstinputlisting[language=Matlab]{cap_3/triSup.m}
+\end{itemize}
+\subsubsection{Risoluzione sistemi lineari, sovradeterminati e non lineari}
+\begin{itemize}
+    \item \texttt{Risoluzione sistema lineare con matrice matrice dei coefficienti fattorizzata LUP}
+\lstinputlisting[language=Matlab]{cap_3/linLUP.m}
+    \item \texttt{Risoluzione sistema lineare con matrice matrice dei coefficienti fattorizzata LDLT}
+\lstinputlisting[language=Matlab]{cap_3/linLDLT.m}
+    \item \texttt{Risoluzione sistema lineare sovradeterminato con matrice dei coefficienti fattorizzata QRH}
+\lstinputlisting[language=Matlab]{cap_3/solveQRH.m}
+    \item \texttt{Risoluzione sistema non lineare con metodo di Newton}
+\lstinputlisting[language=Matlab]{cap_3/nonLinearNewton.m}
+\end{itemize}
+\end{flushleft}
