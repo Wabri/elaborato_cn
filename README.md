@@ -17,8 +17,6 @@ The projecct is divided by chapter.
 :heavy_check_mark: : Done.
 :heavy_exclamation_mark: : To be revised.
 :x: To do.
-
-1. **Chapter 1**
     1. Exercise 1 - :heavy_check_mark:
     1. Exercise 2 - :heavy_check_mark:
     1. Exercise 3 - :heavy_check_mark:
@@ -32,7 +30,6 @@ The projecct is divided by chapter.
     1. Exercise 11 - :heavy_check_mark:
     1. Exercise 12 - :heavy_check_mark:
     1. Exercise 13 - :heavy_check_mark:
-2. **Chapter 2**
     2. Exercise 1 - :heavy_check_mark:
     2. Exercise 2 - :heavy_check_mark:
     2. Exercise 3 - :heavy_check_mark:
@@ -41,7 +38,6 @@ The projecct is divided by chapter.
     2. Exercise 6 - :heavy_check_mark:
     2. Exercise 7 - :heavy_check_mark:
     2. Exercise 8 - :heavy_check_mark:
-3. **Chapter 3**
     3. Exercise 1 - :heavy_check_mark:
     3. Exercise 2 - :heavy_check_mark:
     3. Exercise 3 - :heavy_check_mark:
@@ -63,7 +59,6 @@ The projecct is divided by chapter.
     3. Exercise 19 - :heavy_check_mark:
     3. Exercise 20 - :heavy_check_mark:
     3. Exercise 21 - :heavy_check_mark:
-4. **Chapter 4**
     4. Exercise 1 - :x:
     4. Exercise 2 - :x:
     4. Exercise 3 - :x:
@@ -74,7 +69,6 @@ The projecct is divided by chapter.
     4. Exercise 8 - :x:
     4. Exercise 9 - :x:
     4. Exercise 10 - :x:
-5. **Chapter 5 and 6**
     5. Exercise 1 - :x:
     5. Exercise 2 - :x:
     5. Exercise 3 - :x:
