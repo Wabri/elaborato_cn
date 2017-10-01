@@ -1,2 +1,11 @@
-Consideriamo la Matrice di ingresso $A$ già fattorizzata LU con pivoting parziale:
+\begin{flushleft}
+Supponendo che in ingresso si abbiano le matrici di fattorizzazione LU con pivoting parziale di una matrice quadrata non singolare qualsiasi $A \in \mathbb{R}^{n \times n}$, rispettivamente:
+\begin{itemize}
+    \item L matrice triangolare inferiore
+    \item U matrice triangolare superiore 
+    \item P matrice delle permutazioni
+\end{itemize}
+e il vettore dei termini noti $b$, è possibile scrivere la function linLUP che risolve sistemi lineari:
 \lstinputlisting[language=Matlab]{cap_3/linLUP.m}
+Abbiamo sfruttato le function triInf e triSup, la loro implementazione si trova a fine capitolo a pagina \pageref{functcap3}.
+\end{flushleft}

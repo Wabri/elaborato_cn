@@ -1,7 +1,7 @@
 function [L,U,P]=factLUP(A)
 [m,n]=size(A);
 if m~=n 
-    error('[Errore] La matrice inserita A inserita non e'' quadrata'); 
+    error('La matrice inserita non e'' quadrata'); 
 end
 L=eye(n); 
 P=eye(n); 
@@ -9,10 +9,10 @@ U=A;
 for k=1:n
     [pivot, m]=max(abs(U(k:n,k)));
     if pivot==0
-        error('[Attenzione] La matrice e'' singolare');
+        error('La matrice inserita e'' singolare');
     end
     m=m+k-1;
-        if m~=k
+    if m~=k
         U([k,m], :) = U([m, k], :);
         P([k,m], :) = P([m, k], :);
         if k >= 2

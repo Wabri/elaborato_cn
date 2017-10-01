@@ -3,7 +3,7 @@ function A = factQRH(A)
     for i=1:n
         alpha = norm(A(i:m, i));
         if alpha==0
-            error('[Errore] La matrice A non ha rango massimo')
+            error('La matrice A non ha rango massimo')
         end
         if A(i,i)>=0
             alpha = -alpha;

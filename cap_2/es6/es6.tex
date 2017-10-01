@@ -1,6 +1,7 @@
 \begin{flushleft}
+Per poter costruire una tabella abbiamo scritto il seguente codice MatLab (lo script usa function definite a parte che è possibile vedere a pagina \pageref{functcap2}):
 \lstinputlisting[language=Matlab]{cap_2/es6/es6.m}
-Il numero di iterazioni effettuate all'interno dei 3 algoritmi, vengono salvate nella variabile count che restituisce i valori sotto forma di tabella:
+Sotto forma tabellare rappresentiamo il numero di iterazioni effettuate dai 3 algoritmi (salvate nella matrice $iter$):
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
@@ -21,12 +22,19 @@ $10^{-10}$ & 5 & 6 & 62 \\
 \end{tabular}
 \end{center}
 
-Il numero di condizionamento del problema è dato da $k = \frac{1}{\big|f'(x^*)\big|}$. La derivata della nostra funzione è:
+Questo risultato è possibile vederlo in maniera grafica a pagina \pageref{fes26}.
+
+Il numero di condizionamento del problema è dato da:
+\[
+k = \frac{1}{\big|f'(x^*)\big|}
+\]
+Per poterlo calcolare è necessario trovare la derivata della nostra funzione che è pari a:
 \[
 f'(x) = -1 - cos(x) + 5 \cdot sin(10\cdot x) - \frac{cos^2(10\cdot x)}{2}
 \]
-Essendo la radice $x^*$ della nostra funzione uguale a 0,488944 il relativo numero di condizionamento è dato da:
+Essendo la radice della nostra funzione  $x^* = 0,488944$ il relativo numero di condizionamento è dato da:
 \[
 k = \frac{1}{\Big|f'(x^*)\Big|} = \frac{1}{\Big|f'(0,488944)\Big|} = \frac{1}{\Big|-4,27233\Big|} = \frac{1}{4,27233} = 0,234064
 \]
+questo significa che il problema è ben condizionato.
 \end{flushleft}

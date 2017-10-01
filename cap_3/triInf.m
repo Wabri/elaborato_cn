@@ -1,12 +1,13 @@
-function [b] = triInf(A, b)
+function [x] = triInf(A, b)
+    x = b;
     for j=1:length(A)
         if A(j,j) ~= 0
-            b(j) = b(j)/A(j,j);
+            x(j) = x(j)/A(j,j);
         else
-            error('[Attenzione]La matrice e'' singolare')
+            error('La matrice e'' singolare')
         end
         for i=j+1:length(A)
-            b(i) = b(i)-A(i,j)*b(j);
+            x(i) = x(i)-A(i,j)*x(j);
         end
     end
 end

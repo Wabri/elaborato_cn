@@ -1,8 +1,6 @@
-format shortEng
-format compact
+format shortE
 
 A = [3,2,1;1,2,3;1,2,1;2,1,2]
-
 b = [6;6;4;4]
 
 x = solveQRH(A,b)
