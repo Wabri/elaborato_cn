@@ -34,12 +34,3 @@ disp('aitken funct 2');
 for i=0:5
     A2(i+1) = Aitken(funct, dfunct, 5, 50, 10^(-i));
 end
-
-format long
-
-N1
-NM1
-A1
-N2
-NM2
-A2

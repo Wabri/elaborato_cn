@@ -11,8 +11,17 @@ Nel passo successivo si usa la serie di istruzioni forniteci dall'esercizio. Nel
 \includegraphics[left, width=250px]{cap_3/es16/es316a}
 \end{figure}
 \newline \\
-Tuttavia questa propagazione degli errori non risulta essere malcondizionato come risulta della seguente differenza:
-\begin{figure}[h]
-\includegraphics[left, width=250px]{cap_3/es16/es316b}
-\end{figure}
+Si vede che c'è una perturbazione sulla soluzione che è possibile spiegare andando a studiare la seguente disuguaglianza:
+\[
+\frac{\left|\left|\Delta x\right|\right|}{\left|\left|x\right|\right|} \leq k(A) \cdot \left(\frac{\left|\left|\Delta c\right|\right|}{\left|\left|c\right|\right|} + \frac{\left|\left|\Delta A\right|\right|}{\left|\left|A\right|\right|}\right) = k(A) \cdot \left(\frac{\left|\left|\Delta c\right|\right|}{\left|\left|0.1\cdot b\right|\right|} + \frac{\left|\left|\Delta A\right|\right|}{\left|\left|A\right|\right|}\right) = 
+\]
+\[
+= k(A) \cdot \left(\frac{\left|\left|\Delta c\right|\right|}{10^{-1}\cdot\left|\left|b\right|\right|} + \frac{\left|\left|\Delta A\right|\right|}{\left|\left|A\right|\right|}\right) = k(A) \cdot \left(10\cdot\frac{\left|\left|\Delta c\right|\right|}{\left|\left|b\right|\right|} + \frac{\left|\left|\Delta A\right|\right|}{\left|\left|A\right|\right|}\right) 
+\]
+Considerato che:
+\begin{itemize}
+    \item $\frac{\left|\left|\Delta x\right|\right|}{\left|\left|x\right|\right|}$ può essere assimilato ad una sorta di errore relativo sul risultato
+    \item $\frac{\left|\left|\Delta A\right|\right|}{\left|\left|A\right|\right|}$ e $\frac{\left|\left|\Delta c\right|\right|}{\left|\left|c\right|\right|}$ possono essere assimilati ai corrispondenti errori relativi sui dati in ingresso
+\end{itemize}
+dato che il numero di condizionamento del problema è $k(A)=1.0202\cdot10^{20}$, che è $>>1$ (calcolato nell'esercizio precedente a pag. \pageref{es315}), allora la matrice è mal condizionata.
 \end{flushleft}
