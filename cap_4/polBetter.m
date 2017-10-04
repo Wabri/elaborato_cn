@@ -12,7 +12,6 @@ function [y] = polBetter(x,y, m)
   for j = m:-1:1
     V(:,j) = x.*V(:,j+1);
   end
-  V
  
   %backslash
   y = V\y';
