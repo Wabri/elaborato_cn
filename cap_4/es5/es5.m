@@ -1,34 +1,55 @@
-Rungef = @(x) 1./(1.+x.^2);
-a=-5; b=5;
-max_n = 20;
-n_steps = 5;
-[plots, l] = evalSpline(Rungef,a,b, max_n, n_steps, 0, 1000);
-hold on;
-grid on;
-plot(l, plots);
-hold off
-[plots2, l] = evalSpline(Rungef,a,b, max_n, n_steps, 1, 1000);
-hold on;
-grid on;
-plot(l, plots2);
-hold off
+fx = @(x) 1./(1.+x.^2);
+xval = linspace(-5, 5);
 
-error = plots' - plots2';
-boxplot(error(:,1:5), 4:4:max_n);
+temp = [];
+temp2 = [];
 
-Sinf = @(x) x.*sin(x);
-a=0; b=pi;
-[plots, l] = evalSpline(Sinf,a,b, max_n, n_steps, 0, 1000);
-hold on;
-grid on;
-plot(l, plots);
-hold off
+temp = cat(2,temp,fx(xval));
 
-[plots2, l] = evalSpline(Sinf,a,b, max_n, n_steps, 1, 1000);
-hold on;
-grid on;
-plot(l, plots2);
-hold off
-error = plots' - plots2';
+for i = 4: 4: 20
+    x = linspace(-5, 5, i);
+    f = fx(x);
 
-boxplot(error(:,1:5), 4:4:max_n);
+    M = moment(f, x);
+
+    s = svalCubica(f, x, M, xval);
+
+    ss = spline(x, f);
+    ssval = ppval(ss, xval);
+
+    temp = cat(1,temp,s);
+    temp2 = cat(1, temp2, ssval);
+end
+
+figure(1);
+plot(xval,cat(1,temp(1:2:4,:),temp2(2:2:3,:)));
+legend('f(x)','spline cubica','not-a-knot');
+
+fx = @(x) x.*sin(x);
+xval = linspace(0, pi);
+
+temp = [];
+temp2 = [];
+
+temp = cat(2,temp,fx(xval));
+
+for i = 4: 4: 20
+    x = linspace(-5, 5, i);
+    f = fx(x);
+
+    M = moment(f, x);
+
+    s = svalCubica(f, x, M, xval);
+    
+    ss = spline(x, f);
+    ssval = ppval(ss, xval);
+
+    temp = cat(1,temp,s);
+
+    temp2 = cat(1, temp2, ssval);
+
+end
+
+figure(2);
+plot(xval,cat(1,temp(1:2:4,:),temp2(2:2:3,:)));
+legend('f(x)','spline cubica','not-a-knot');

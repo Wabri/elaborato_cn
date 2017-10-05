@@ -1,3 +1,10 @@
+% funct -> funzione da interpolare
+% a,b -> intervallo di interpolazione
+% maxn -> limite massimo del grado di interpolazione della funzione
+% n_steps -> numero di polinomi interpolanti da calcolare
+% cheb_asc -> = 1 ascisse calcolate con chebyshev | = 0 ascisse calcolate
+% con ascisse equispaziate
+% plot_steps -> numero di nodi
 function [errors, plots, l] = evaluatePoli(funct, a, b, maxn, n_steps, cheb_asc, plot_steps)
     errors = zeros(n_steps,plot_steps);
     plots = zeros(n_steps,plot_steps);

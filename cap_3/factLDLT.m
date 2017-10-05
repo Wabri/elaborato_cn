@@ -1,5 +1,4 @@
-function [L,D] = factLDLT(M)
-    A = M;
+function [L,D] = factLDLT(A)
     [m,n]=size(A);
     if m~=n
         error('La matrice non e'' quadrata')
@@ -16,20 +15,6 @@ function [L,D] = factLDLT(M)
         end
         A((j+1):n,j)=(A((j+1):n,j)-A((j+1):n,1:(j-1))*v)/A(j,j);
     end
-    for j=1:n
-      for i=1:n
-           if i==j
-                D(i,j) = A(i,j);
-                L(i,j) = 1;
-           end
-           if i>j
-                D(i,j) = 0;
-                L(i,j) = A(i,j);
-           end
-           if i<j
-                D(i,j) = 0;
-                L(i,j) = 0;
-           end
-       end
-    end
+    D=diag(diag(A));
+    L=tril(A,-1)+eye(size(A));
 end

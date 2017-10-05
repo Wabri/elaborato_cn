@@ -14,16 +14,16 @@ Indichiamo con $\varepsilon_{x},\varepsilon_{y},\varepsilon_{z}$ i relativi erro
     \approx \frac{x(1+\varepsilon_{x}+\varepsilon_{a}+\varepsilon_{b})+y(1+\varepsilon_{y}+\varepsilon_{a}+\varepsilon_{b})+z(1+\varepsilon_{z}+\varepsilon_{b})-x-y-z}{x+y+z} \leq
     \]
     \[ 
-    \leq \frac{3\cdot x\cdot\varepsilon_{m}+ 3\cdot y\cdot\varepsilon_{m} + 2\cdot z\cdot\varepsilon_{m}}{x+y+z} \leq \frac{3\cdot\varepsilon_{m}\cdot(x+y+z)}{x+y+z} = 3\cdot\varepsilon_{m}
+    \leq \left|\frac{3\cdot x\cdot\varepsilon_{m}+ 3\cdot y\cdot\varepsilon_{m} + 2\cdot z\cdot\varepsilon_{m}}{x+y+z}\right| \leq \left|\frac{3\cdot\varepsilon_{m}\cdot(x+y+z)}{x+y+z}\right| = 3\cdot\left|\varepsilon_{m}\right|
     \]
     \item seguendo gli stessi procedimenti del punto precedente possiamo scrivere:
     \[
     \varepsilon_{2} = \frac{(x(1+\varepsilon_{x})+(y(1+\varepsilon_{y})+z(1+\varepsilon_{z}))(1+\varepsilon_{a}))(1+\varepsilon_{b})-(x+y+z)}{x+y+z} = 
     \]
     \[
-    = ... \leq \frac{2\cdot x\cdot\varepsilon_{m}+ 3\cdot y\cdot\varepsilon_{m} + 3\cdot z\cdot\varepsilon_{m}}{x+y+z} \leq \frac{3\cdot\varepsilon_{m}\cdot(x+y+z)}{x+y+z} = 3\cdot\varepsilon_{m}
+    = ... \leq \left|\frac{2\cdot x\cdot\varepsilon_{m}+ 3\cdot y\cdot\varepsilon_{m} + 3\cdot z\cdot\varepsilon_{m}}{x+y+z}\right| \leq \left|\frac{3\cdot\varepsilon_{m}\cdot(x+y+z)}{x+y+z}\right| = 3\cdot\left|\varepsilon_{m}\right|
     \]
 \end{itemize}
 
-Otteniamo quindi che i valori degli errori $\varepsilon_{1}$ e $\varepsilon_{2}$ sono $\leq 3\cdot\varepsilon_{m}$.
+Otteniamo quindi che i valori degli errori $\varepsilon_{1}$ e $\varepsilon_{2}$ sono $\leq 3\cdot\left|\varepsilon_{m}\right|$.
 \end{flushleft}

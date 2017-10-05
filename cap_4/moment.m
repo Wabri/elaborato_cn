@@ -1,22 +1,20 @@
-function [ m ] = moment(phi, xi, dd)
-    n = length(xi) + 1;
-    u = zeros(1, n - 1);
-    l = zeros(1, n - 2);
-    dd = 6 * dd;
-    u(1) = 2;
-    for i = 2 : n - 1
-        l(i) = phi(i) / u(i - 1);
-        u(i) = 2 - l(i) * xi(i - 1);
+function [ M ] = moment(f, x)
+    n = length(x)-1;
+    dd = 6*diffDiv(x, f, 3);
+    h = diff(x);
+    U = h(1:end-1)./( h(1:end-1)+h(2:end) );
+    L = 5; L(1) = [];
+    U(end) = [];
+    D = 2*ones(1,n-1);
+    
+    for i = 2:n-1
+        L(i-1) = L(i-1)/D(i-1);
+        D(i) = 2-L(i-1)*U(i-1);
     end
-    y = zeros(1, n - 1);
-    y(1) = dd(1);
-    for i = 2 : n - 1
-        y(i) = dd(i) - l(i) * y(i - 1);
-    end
-    m = zeros(1, n - 1);
-    m(n - 1) = y(n - 1) / u(n - 1);
-    for i = n - 2 : - 1 : 1
-        m(i) = (y(i) - xi(i) * m(i + 1)) / u(i);
-    end
-    m = [0, m, 0];
+    
+    for i=2:n-2, dd(i) = dd(i) - L(i) * dd(i-1); end
+    dd(1:end) = dd(1:end)./D(1:end);
+    for i=n-3:-1:1, dd(i) = dd(i) - L(i) * dd(i+1); end
+    
+    M = [0,dd,0];
 end

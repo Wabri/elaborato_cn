@@ -18,6 +18,7 @@ x_{n+1} = x_{n} - \frac{f(x_{n})}{f'(x_{n})} = x_{n}-\frac{x_{n}^n-\alpha}{n\cdo
 \]
 La radice da approssimare in questo caso ha grado ennesimo quindi sono necessarie delle modifiche alla funzione matlab usata nell'esercizio precedente che chiamiamo y = NewtonSqrt(n, alpha, x\_0, imax, tol). Lo script MatLab corrispondente ai casi $n = 3,4,5$ è il seguente:
 \lstinputlisting[language=Matlab]{cap_2/es2/es2.m}
+\lstinputlisting[language=matlab]{cap_2/NewtonSqrtN.m}
 Mostriamo l'output in forma tabellare con $i$ che rappresenta le iterazioni del metodo e $x_i$ i relativi risultati:
 \begin{center}
 \begin{tabular}{|c|c|c|c|}

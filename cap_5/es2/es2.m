@@ -1,16 +1,39 @@
-format long
-F = @(x) x*exp(1)^-x*cos(2*x);
-y = (3*(exp(1)^(-2*pi) -1) -10*pi*exp(1)^(-2*pi))/25;
-nmax = 8;
-err = zeros(nmax,2);
-rap = zeros(nmax-1,2);
-for i=1:8
-    err(i,1) = abs(y - trapeziComp(F,0,2*pi,2^i));
-    err(i,2) = abs(y - simpsonComp(F,0,2*pi,2^i));
-    if i>1
-        rap(i-1,:) = err(i,:)./err(i-1,:);
+format longE
+
+f = @(x) x*exp(-x)*cos(2*x);
+I = (-10*pi*exp(-2*pi)+3*(exp(-2*pi)-1))/25;
+kmax = 8;
+error = zeros(kmax,2);
+rap = zeros(kmax-1,2);
+
+for k=1:kmax
+    trap(k) = trapeziComposita(f,0,2*pi,2.^k);
+    error(k,1) = abs(I-trap(k));
+    simp(k) = simpsonComposita(f,0,2*pi,2.^k);
+    error(k,2) = abs(I-simp(k));
+    if k>=2
+        rap(k-1,1) = error(k,1)/error(k-1,1);
+        rap(k-1,2) = error(k,2)/error(k-1,2);
     end
 end
 
-semilogy([1:8],err);
-plot([2:nmax],rap);
+figure(1);
+plot((cat(1,I*ones(size(trap)),cat(1,trap,simp)))');
+title('Valori ottenuti mediante le due formule');
+legend('Valore vero','Trapezi Composita (i=1)','Simpson Composita (i=2)');
+xlabel('k');
+ylabel('I_i^{2^k}');
+
+figure(2);
+plot(error);
+title('Andamento degli errori');
+legend('Errori Trapezi Composita (i=1)','Errori Simpson Composita (i=2)');
+xlabel('k');
+ylabel('E_i^{2^k}');
+
+figure(3);
+plot(rap);
+title('Rapporto tra gli errori correnti con i precedenti');
+legend('Trapezi Composita (i=1)','Simpson Composita (i=2)');
+xlabel('k-1');
+ylabel('Valore del rapporto');

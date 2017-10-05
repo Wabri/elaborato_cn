@@ -7,7 +7,11 @@ function [x] = nonLinearNewton(F,J, x, imax, tolx, out)
         [L,U,P] = factLUP(feval(J,x));
         x=x+linLUP(L,U, P, -feval(F,x));
         if out
+            disp ('iterata:');
+            disp(i);
+            disp('norma dell''incremento:');
             disp(norm(x-xold));
+            disp('valori di x:');
             disp(x);
         end
     end

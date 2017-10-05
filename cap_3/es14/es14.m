@@ -2,16 +2,16 @@ format shortE
 
 % 3.5 3.6
 disp('Vettore residuo con fattorizzazione LU con pivoting parziale:');
-A=[15,-3,2;-4,9,2;6,0,10];
+A=[0,-3,8;-1,8,7;1,3,0];
 [L,U,P] = factLUP(A);
-b = [3.2,2.3,3.1]';
+b = [3.1416,1.1618,2.7183]';
 [x] = linLUP(L,U,P,b);
 r=A*x -b
 
 % 3.11  3.12
 disp('Vettore residuo con fattorizzazione LDLT:');
-A=[15,-3,2;-4,9,2;6,0,10];
+A=[14,5,2;5,8,1;2,1,4];
 [L,D] = factLDLT(A);
-b = [3.2,2.3,3.1]';
-[x] = linLUP(L,D*L',eye(3),b);
+b = [3.1416,1.1618,2.7183]';
+[x] = linLDLT(L,D,b);
 r=A*x -b
