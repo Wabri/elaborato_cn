@@ -1,6 +1,9 @@
 \begin{flushleft}
-Abbiamo scritto delle funzioni MalLab che ci permettono di effettuare il raffronto tra i vari metodi (in ordine: metodo di Newton, metodo di Newton modificato, metodo di accelerazione di Aitken), è possibile vederle a pag. \pageref{functcap2}. Scritte le Function, le abbiamo usate nel seguente script: 
+Abbiamo scritto delle funzioni MalLab che ci permettono di effettuare il raffronto tra i vari metodi (in ordine: metodo di Newton, metodo di Newton modificato, metodo di accelerazione di Aitken). Scritte le Function, le abbiamo usate nel seguente script: 
 \lstinputlisting[language=Matlab]{cap_2/es4/es4.m}
+\lstinputlisting[language=matlab]{cap_2/Newton.m}
+\lstinputlisting[language=matlab]{cap_2/NewtonMod.m}
+\lstinputlisting[language=matlab]{cap_2/Aitken.m}
 Questo codice esegue i metodi di Newton, Newton modificato e Aitken per le funzioni date. Rispetto alla funzione $f_1(x)=(x-\pi)^{10}$ rappresentiamo l'output del codice precedente in forma tabellare: 
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
@@ -33,9 +36,11 @@ $10^{-5}$ & 3.154537411727535 & 3.154537411727535 & 3.141592516390607 \\
 \end{center}
 Abbiamo poi riportato il plot matlab relativo ai precedenti valori:
 \begin{figure}[H]
-\includegraphics[left, width=210px]{plot/fes24a.eps}
+\includegraphics[width=500px, height=300px]{plot/fes24a.eps}
 \caption{Andamento del calcolo degli zeri della funzione $f_1(x)=(x-\pi)^{10}$ al variare della tolleranza}
-\includegraphics[left, width=210px]{plot/fes24b.eps}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[width=500px, height=300px]{plot/fes24b.eps}
 \caption{Andamento del calcolo degli zeri della funzione $f_2(x) = (x-\pi)^{10} \cdot e^{2\cdot x}$ al variare della tolleranza}
 \end{figure}
 \end{flushleft}

@@ -21,6 +21,14 @@ plotting1 = cat(2,plotting1,f1(l1)');
 figure(1);
 plot(l1,plotting1');
 
+n_p = 3;
+
+plotting1 = cat(2,plotsA1(n_p,:)',plotsC1(n_p,:)');
+plotting1 = cat(2,plotting1,f1(l1)');
+
+figure(4);
+plot(l1,plotting1');
+
 f2 = @(x) x.*sin(x);
 a=0;
 b=pi;
@@ -43,7 +51,7 @@ plot(l2,plotting2');
 
 n_p = 2;
 
-plotting3 = cat(2,plotsA2(n_p,:)',plotsC2(n_p,:)');
-plotting3 = cat(2,plotting3,f2(l2)');
+plotting2 = cat(2,plotsA2(n_p,:)',plotsC2(n_p,:)');
+plotting2 = cat(2,plotting2,f2(l2)');
 figure(3);
-plot(l2,plotting3');
+plot(l2,plotting2');
