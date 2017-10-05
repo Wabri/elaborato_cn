@@ -1,22 +1,25 @@
-function [xn, i, err] = gaussSeidel(A, b, x0, tol, nmax)
-  D=diag(diag(A));
-  L=tril(A)-D;
-  U=triu(A)-D;
-  DI=inv(D+L);
-  GS=-DI*U;
-  b1=(D+L)\b;
-  xn=GS*x0+b1;
-  i=1;
-  err(i)=norm(xn-x0,inf)/norm(xn);
-
-  while(err(i)>tol && i<=nmax)
-    x0=xn;
-    xn=GS*x0+b1;
-    i=i+1;
-    err(i)=norm(xn-x0,inf)/norm(xn);
-  end
-  if i>nmax
-    error('Gauss-Seidel non converge nel numero di iterazioni fissato');
-  end
-  i=i-1;
+function [x, k] = gaussSeidel(A, b, x0, tol, nmax)
+    k=0; n = size(A); n=n(1:1); x=zeros(n,1);
+    % implementazione del criterio d'arresto
+    for i=1:n
+        aux = 0;
+        for j=1:i-1, aux = aux + (A(i,j)*x(j)); end
+        temp = 0;
+        for j=i+1:n, temp = temp + (A(i,j)*x0(j)); end
+        x(i) = (b(i)-aux-temp)/(A(i,i));
+    end
+    k = k+1;
+    % ciclo principale
+    while ((k<nmax)&&(norm(A*x-b)>tol*norm(b)))
+       x0=x; x=zeros(n,1);
+       for i=1:n
+           aux = 0;
+           for j=1:i-1, aux = aux + (A(i,j))*x(j); end
+           temp = 0;
+           for j=i+1:n, temp = temp + (A(i,j)*x0(j)); end
+           x(i) = (b(i)-aux-temp)/A(i,i);
+       end
+       k=k+1;
+    end
+    if k>nmax, error('Gauss-Seidel non converge nel numero di iterazioni fissato'); end
 end

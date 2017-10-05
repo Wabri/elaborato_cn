@@ -1,13 +1,7 @@
-function [In, pt] = trapeziAda(f, a, b, tol, pt)
-  h = (b-a)/2;
-  m = (b+a)/2;
-  In1 = h*(feval(f, a) + feval(f, b));
-  In = In1/2 + h*feval(f, m);
-  err = abs(In - In1)/3;
-  if err>tol
-    [intSx, ptSx] = trapeziAdattativaRicorsiva(f, a, m, tol/2, 1);
-    [intDx, ptDx] = trapeziAdattativaRicorsiva(f, m, b, tol/2, 1);
-    In = intSx + intDx;
-    pt = pt+ptSx+ptDx;
-  end
+function [I] = trapeziAdattiva(f, a, b, tol, iterMax)
+  h=b-a;
+  m=(a+b)/2;
+  I1=0.5*h*(feval(f,a)+feval(f,b)); % metodo dei trapezi
+  I=0.5*(I1+h*feval(f,m)); % metodo dei trapezi composito su 2 intervalli
+  if (iterMax>0)&&(abs(I-I1)/3>tol), I=trapeziAdattiva(f,a,m,tol/2,iterMax-1)+trapeziAdattiva(f,m,b,tol/2,iterMax-1); end
 end
